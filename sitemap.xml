@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyabc.github.io/about/index.html</loc>
+    
+    <lastmod>2021-06-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/amd-yes/</loc>
     
     <lastmod>2021-06-04</lastmod>
@@ -80,13 +87,6 @@
   
   <url>
     <loc>https://hyabc.github.io/kongyiji-reading/</loc>
-    
-    <lastmod>2021-04-02</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyabc.github.io/about/index.html</loc>
     
     <lastmod>2021-04-02</lastmod>
     
