@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyabc.github.io/project-railway/</loc>
+    
+    <lastmod>2021-06-18</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/narcissu/</loc>
     
     <lastmod>2021-06-12</lastmod>
@@ -116,7 +123,7 @@
 
   <url>
     <loc>https://hyabc.github.io/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -124,70 +131,77 @@
   
   <url>
     <loc>https://hyabc.github.io/tags/Google-Code-Jam/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/FRP/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Misc/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Hexo/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Reading/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Javascript/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Graph/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Proxy/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/AMD/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Game/</loc>
-    <lastmod>2021-06-17</lastmod>
+    <lastmod>2021-06-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://hyabc.github.io/tags/Gtk/</loc>
+    <lastmod>2021-06-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
