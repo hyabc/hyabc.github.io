@@ -1,0 +1,12 @@
+.rowqwq {
+  display: table;
+}
+.colqwq {
+  float: left;
+  width: 50%;
+}
+@media screen and (max-width: 600px) {
+  .colqwq {
+    width: 100%;
+  }
+}
