@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyabc.github.io/about/index.html</loc>
+    
+    <lastmod>2021-06-22</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/project-railway/</loc>
     
     <lastmod>2021-06-21</lastmod>
@@ -19,13 +26,6 @@
     <loc>https://hyabc.github.io/misc-2/</loc>
     
     <lastmod>2021-06-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyabc.github.io/about/index.html</loc>
-    
-    <lastmod>2021-06-04</lastmod>
     
   </url>
   
