@@ -1,0 +1,471 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>tyz&#39;s blog</title>
+  
+  <subtitle>hyabc</subtitle>
+  <link href="https://hyabc.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://hyabc.github.io/"/>
+  <updated>2022-03-26T00:42:50.001Z</updated>
+  <id>https://hyabc.github.io/</id>
+  
+  <author>
+    <name>Yize Tang (tyz)</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Computer Design</title>
+    <link href="https://hyabc.github.io/computer-design/"/>
+    <id>https://hyabc.github.io/computer-design/</id>
+    <published>2022-03-19T00:19:17.000Z</published>
+    <updated>2022-03-26T00:42:50.001Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.amazon.com/Computer-Organization-Design-RISC-V-Architecture/dp/0128122757">This book</a> is a very fun book about computer architecture, and I highly recommend this book! It describes some design concepts that are quite useful in the real world:</p><ul><li>Design for Moore’s law</li><li>Use abstraction to simplify design</li><li>Make the common case fast</li><li>Performance via parallelism</li><li>Performance via pipelining</li><li>Performance via prediction</li><li>Hierarchy of memories</li><li>Dependability via redundancy</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.amazon.com/Computer-Organization-Design-RISC-V-Architecture/dp/0128122757&quot;&gt;This book&lt;/a&gt; is a very fun book about co</summary>
+      
+    
+    
+    
+    
+    <category term="Architecture" scheme="https://hyabc.github.io/tags/Architecture/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ACM-ICPC ECNA 2021 Solution</title>
+    <link href="https://hyabc.github.io/ecna21/"/>
+    <id>https://hyabc.github.io/ecna21/</id>
+    <published>2022-03-10T17:00:05.000Z</published>
+    <updated>2022-03-11T22:08:54.283Z</updated>
+    
+    <content type="html"><![CDATA[<p>ACM-ICPC <a href="https://icpc-ecna.ysu.edu/PastResults/2021/home.html">East Central North America</a> Regional 2021 was held on Feb 27, 2022. Here is a <a href="https://ecna21.kattis.com/standings">link</a> to the contest scoreboard, and I’m part of the team CMU9. </p><img src="/images/ecna2021-scoreboard.jpg" style="height: 300px;"><p>The contest was held on computer clusters on 5th floor of GHC, because the competition was remote this year. Here is a photo of the contest!</p><img src="/images/ecna2021-photo.jpg" style="height: 300px;"><h3 id="A-1’s-For-All"><a href="#A-1’s-For-All" class="headerlink" title="A. 1’s For All"></a>A. 1’s For All</h3><p>Notice the unusual 15 second time limit. We can brute-force with a simple $O(n^2)$ DP and costs $5 \times 10^9$ time. And surprisingly, it passed the time limit!</p><h3 id="B-Abridged-Reading"><a href="#B-Abridged-Reading" class="headerlink" title="B. Abridged Reading"></a>B. Abridged Reading</h3><p>We want to select arbitrary two leaf nodes and the costs is all its ancestors. So for any two leaf nodes, we can compute their LCA and then compute their cost.</p><h3 id="C-Ball-of-Whacks"><a href="#C-Ball-of-Whacks" class="headerlink" title="C. Ball of Whacks"></a>C. Ball of Whacks</h3><p>This problem looks too frustrating… I don’t like 3D objects.</p><h3 id="D-Downsizing"><a href="#D-Downsizing" class="headerlink" title="D. Downsizing"></a>D. Downsizing</h3><p>If you plug in any curve to the equation of the corresponding line, you will find that each curve is a piece of another circle. Now you can calculate the circle area. You can add the area of sector in the circle (1), subtract the triangle from circle center to the endpoints (2), and add triangle from point O to the endpoints (3). Then you get the directional area and then sum up.</p><p>However, we got numerous Wrong Answer for this problem. There are two major issues. First, the line can intersect with the large circle. In this case, the generated circle has infinite radius and becomes a line, so you only need to calculate part (3). Second, when the circle sector is 180 degrees, you can’t determine whether it is $+180^\circ$ or $-180^\circ$. The two endpoints and the center of generated circle are on the same line. You will need to look at the sign of area (3) to determine the sign of (1).</p><h3 id="E-Gambling-Game"><a href="#E-Gambling-Game" class="headerlink" title="E. Gambling Game"></a>E. Gambling Game</h3><p>This is a probability DP problem. You can use $f[i][j]$ to represent the probability of winning when you have i square remaining on your paper while there are j ball announces left. Now you can easily determine the probability of current ball announce eliminating a square, because the number of balls remaining decreases one when the number of ball announces decrease one. Then you can use Python bigint to avoid writing bigint manually!</p><h3 id="F-Growing-Some-Oobleck"><a href="#F-Growing-Some-Oobleck" class="headerlink" title="F. Growing Some Oobleck"></a>F. Growing Some Oobleck</h3><p>This is a simuation problem. Every time when there exist circles to be merged, you simulate the merge operation. When there are no circles to be merged, you determine the next timestamp that a circle merge will happen, and fast forward to that time. Be careful of floating point precision problem!</p><h3 id="G-Noonerized-Spumbers"><a href="#G-Noonerized-Spumbers" class="headerlink" title="G. Noonerized Spumbers"></a>G. Noonerized Spumbers</h3><p>Brute-force all possible prefixes. Because all integers are smaller than $2^{31}$, the length of integers are at most 10. So it will work.</p><h3 id="H-Numble"><a href="#H-Numble" class="headerlink" title="H. Numble"></a>H. Numble</h3><p>(I don’t know how to solve this)</p><h3 id="I-Pinned-Files"><a href="#I-Pinned-Files" class="headerlink" title="I. Pinned Files"></a>I. Pinned Files</h3><p>List the pinned elements and unpinned elements separately. First, in the optimal strategy, for any element, you operate on (pin/unpin) it at most twice. If you pin/unpin/pin element i, the result is equivalent to pin i at the timestamp of your last pin. If you pin/unpin/pin/unpin element j, the result is equivalent to pin/unpin j at the timestamp of last two operations (pin/unpin). Your previous operations to adjust the order become completely useless at the timestamp of your latest operation. </p><p>Now, for any element that begin in the pinned list and end in the unpinned list (or opposite), it can only be operated exactly once. For any element that begin and end in the same list, it can cost zero or two operations. We want to maximize the zero-operation element, so we can just greedily count how many elements do not need any operation.</p><h3 id="J-Recycling"><a href="#J-Recycling" class="headerlink" title="J. Recycling"></a>J. Recycling</h3><p>Use a monotone stack to compute the nearest element larger than itself to the left and to the right. Then loop over all elements to find the answer.</p><h3 id="K-Stable-Table"><a href="#K-Stable-Table" class="headerlink" title="K. Stable Table"></a>K. Stable Table</h3><p>First, we can construct a directed graph, with “u =&gt; v” denoting if v is stable, then u is stable (equivalently, any square of node u is one square above any square of node v). We have a “top” set (containing at most 2 elements) and a “bottom” set, and we want the minimum number of paths from all top nodes toward any bottom node, and paths can be shared. We can start by a BFS with sources from all bottom nodes.</p><p>If there are one top nodes, we just want a simple shortest path, and this is computed in BFS. If there are two top nodes, denoted by root1 and root2, an existing solution is the sum of distance from bottom node to root1 and root2. But the two top nodes can also share path to reach any bottom node. Then the path should look like a fork: whenever two path intersect, they intersect until bottom node. Now we can do another two BFS from root1 and root2, then iterate over all nodes (to consider it as the potential path intersection), and its value is the sum of three BFS (starting from i to root1, root2 and bottom node).</p><h3 id="L-Statues"><a href="#L-Statues" class="headerlink" title="L. Statues"></a>L. Statues</h3><p>We can iterate over all possible directions, and for any square, count if it exists on its corresponding diagonal. Then compute the minimum answer among all direction.</p><h3 id="M-Tomb-Hater"><a href="#M-Tomb-Hater" class="headerlink" title="M. Tomb Hater"></a>M. Tomb Hater</h3><p>In this problem, because you can only move left/right/down, and you can visit one square only once, we know that we always visit a continuous segment on any line. Now we can maintain a Trie of the input strings, and make sure we are always staying on some node on the Trie. We can use DP with state $f[i][j][k]$ to represent we are currently on the i-th line, j-th column and Trie node k. Then we attempt to walk on the (i + 1)-th line and starting from column j. Notice that if we are on a Trie terminal node, we have the option of going back to root and continuing, so we have to maintain an array of all possible current Trie node.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;ACM-ICPC &lt;a href=&quot;https://icpc-ecna.ysu.edu/PastResults/2021/home.html&quot;&gt;East Central North America&lt;/a&gt; Regional 2021 was held on Feb 27, </summary>
+      
+    
+    
+    
+    
+    <category term="ICPC" scheme="https://hyabc.github.io/tags/ICPC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Icarus Theme Customization</title>
+    <link href="https://hyabc.github.io/hexo-icarus-customization/"/>
+    <id>https://hyabc.github.io/hexo-icarus-customization/</id>
+    <published>2022-03-04T19:44:30.000Z</published>
+    <updated>2022-03-04T20:25:08.708Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://github.com/ppoffice/hexo-theme-icarus">Icarus</a> is a great theme for Hexo. And we can also customize it to make it more personal! We assume you installed hexo-theme-icarus as a node package via npm. If not, you can replace all the <code>node_modules/hexo-theme-icarus</code> path below to corresponding installation path. And make a backup of your current configuration before you proceed in case of any error!</p><h3 id="Even-More-Rounded-Corners"><a href="#Even-More-Rounded-Corners" class="headerlink" title="(Even More) Rounded Corners"></a>(Even More) Rounded Corners</h3><p>The various containers, or “cards”, on the web page already have rounded corners. However, sometimes they don’t look round enough. We can manually adjust how much we want the rectangle corner to be curved. Go to <code>node_modules/hexo-theme-icarus/include/style/base.styl</code> and change <code>$card-radius</code> to your preferred size. I’m using <code>$card-radius ?= 16px</code>.</p><h3 id="Change-Primary-Colors"><a href="#Change-Primary-Colors" class="headerlink" title="Change Primary Colors"></a>Change Primary Colors</h3><p>By default, the “primary” color of this website is blue, which is the color of the color of hyperlinks, and active elements when you hover your mouse. This can be customized in the same <code>base.styl</code> file. Change the <code>$primary</code> variable to your favourite color, and there’s also other interesting variables like <code>$navbar-item-active-color</code> that you might consider to change.</p><p>In the same file, you can also configure other elements like card shadows. It follows the same format as the usual <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow">CSS box-shadow</a>.</p><h3 id="Wide-Screen-Page-Width"><a href="#Wide-Screen-Page-Width" class="headerlink" title="Wide Screen Page Width"></a>Wide Screen Page Width</h3><p>The default page width seems a bit too narrow under wide screens (there are some unused horizontal screen space). And you can modify it! Go to <code>node_modules/hexo-theme-icarus/include/style/responsive.styl</code> and this Javascript code determines the page width. For the widescreen section under function fullhd, I changed it to <code>max-width: $widescreen - 1 * $gap</code> and <code>width: $widescreen - 1 * $gap</code>. It’s sufficient for me to just minus one multiply the gap. Thanks <a href="http://www.anticme.com/2021/03/26/icarus%E4%B8%AA%E6%80%A7%E5%8C%96%E9%85%8D%E7%BD%AE/">this blog</a> for the solution!</p><h3 id="Change-Background-Image"><a href="#Change-Background-Image" class="headerlink" title="Change Background Image"></a>Change Background Image</h3><p>This one seems fun. Instead of the default grey background, you can configure something more interesting. You can simply put the css inside hexo-theme-icarus. Go to this directory: <code>node_modules/hexo-theme-icarus/source/css</code>, create a file (for example, <code>bg.styl</code>. You can use the generic way of setting the background image of any webpage:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(<span class="string">&quot;/path/to/your/background/image.jpg&quot;</span>);</span><br><span class="line">  <span class="attribute">background-size</span>: cover;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-attachment</span>: fixed;</span><br><span class="line">  <span class="attribute">background-position</span>: <span class="number">50%</span> <span class="number">50%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Then, include this file to the Hexo generation system by adding</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@import</span> <span class="string">&#x27;bg&#x27;</span></span><br></pre></td></tr></table></figure><p>to <code>style.styl</code> file. Now you have a working background image in your website! This blog uses a CG from <a href="https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%AF%E3%83%A9%E3%83%8E%E8%A9%A9">Sakura no Uta</a> as the background image.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/ppoffice/hexo-theme-icarus&quot;&gt;Icarus&lt;/a&gt; is a great theme for Hexo. And we can also customize it to make it mor</summary>
+      
+    
+    
+    
+    
+    <category term="Hexo" scheme="https://hyabc.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Glory to Ukraine</title>
+    <link href="https://hyabc.github.io/glory-to-ukraine/"/>
+    <id>https://hyabc.github.io/glory-to-ukraine/</id>
+    <published>2022-02-27T18:12:09.000Z</published>
+    <updated>2022-02-27T18:20:24.791Z</updated>
+    
+    <content type="html"><![CDATA[<p>The world has witnessed another unjust and evil war, even in the 21st century. We stand with Ukraine!</p><img src="/images/ukraine.jpg" style="height: 350px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;The world has witnessed another unjust and evil war, even in the 21st century. We stand with Ukraine!&lt;/p&gt;
+&lt;img src=&quot;/images/ukraine.jpg&quot; </summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project RhythmGame526</title>
+    <link href="https://hyabc.github.io/rg526/"/>
+    <id>https://hyabc.github.io/rg526/</id>
+    <published>2022-02-20T02:47:21.000Z</published>
+    <updated>2022-02-20T03:02:15.049Z</updated>
+    
+    <content type="html"><![CDATA[<p>The game mentioned in the last post was completed! We demonstrated this game system in last week’s <a href="https://www.build18.org/">Build18</a> event from the ECE department (Project <a href="https://www.build18.org/garage/project/704/">Haptic Rhythm Music Game</a>). Here are some photos of the system:</p><img src="/images/rg526/1.jpg" style="height: 120px;"><img src="/images/rg526/2.jpg" style="height: 120px;"><img src="/images/rg526/3.jpg" style="height: 120px;"><img src="/images/rg526/4.jpg" style="height: 120px;"><img src="/images/rg526/5.jpg" style="height: 120px;"><img src="/images/rg526/6.jpg" style="height: 120px;"><img src="/images/rg526/7.jpg" style="height: 120px;"><img src="/images/rg526/8.jpg" style="height: 120px;"><img src="/images/rg526/9.jpg" style="height: 240px;"><p>The <a href="https://www.adafruit.com/product/1201">vibrating motors</a> (the black discs in the photos) are fun! It provides a very powerful haptic effect as we attach it to a 5V power source and switched by a <a href="https://www.adafruit.com/product/355">MOSFET</a> from Raspberry PI GPIO ports.</p><p>And the code is structured so that it’s very easy to create customized games! You only need to create a “note” file containing the starting/ending timestamp and channel (1-4) for each block, and point the global constants in state.c to the new mp3 and note file. </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;The game mentioned in the last post was completed! We demonstrated this game system in last week’s &lt;a href=&quot;https://www.build18.org/&quot;&gt;Bui</summary>
+      
+    
+    
+    
+    
+    <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>OpenGL ES 3 Review</title>
+    <link href="https://hyabc.github.io/opengles-3-review/"/>
+    <id>https://hyabc.github.io/opengles-3-review/</id>
+    <published>2022-01-03T16:34:25.000Z</published>
+    <updated>2022-01-03T23:30:53.446Z</updated>
+    
+    <content type="html"><![CDATA[<p>tyz is currently developing a <a href="https://github.com/rg526/rg526">game</a> based on OpenGL ES 3.0 for 3D graphics. This article will review how to develop an OpenGL ES 3 application.</p><h3 id="Shaders"><a href="#Shaders" class="headerlink" title="Shaders"></a>Shaders</h3><p>There are two types of shaders: vertex shader and fragment shader. Vertex shader processes data for each vertex and both specifies the actual position in the “clip space” (gl_Position) and passes data to fragment shader. Based on the incoming data, fragment shader processes data for each fragment (similar to pixel,  so fragment shaders are sometimes called pixel shaders) and specifies the color for the fragment. Both of shaders run on GPU to reduce CPU processing load. </p><p>This statement actually has a issue. Suppose you want to draw a triangle and the vertex shader passes on data about the three vertices. However, there are much more than three fragments inside the triangle surface that expects input. The graphics hardware will actually perform interpolation on the data from the output of vertex shader to input of fragment shader. Users can specify “flat interpolation” in OpenGL ES 3 API to disable such interpolation.</p><p>As users can write custom shaders, OpenGL ES 3 does not use a fixed graphics pipeline to perform different operations, like OpenGL ES 1.x. To support things like lighting effects, users should write vertex and fragment shaders.</p><h3 id="Attributes-and-uniforms"><a href="#Attributes-and-uniforms" class="headerlink" title="Attributes and uniforms"></a>Attributes and uniforms</h3><p>Input data are passed to the shader programs through attributes and uniforms. Attributes can be different for different input vertices. You can input either an array or a single element and the corresponding data for each vertex will go to shader input. However, OpenGL ES 3 requires a minimum of 16 attributes for all implementations, so to make program runs on every platforms that conforms to OpenGL ES 3 specification, the user can use at most 16 attributes. Uniforms are the same for all vertices, and the minimum number of supporting uniforms are much larger. </p><h3 id="Vertex-Buffer-Objects-VBO-and-Vertex-Array-Objects-VAO"><a href="#Vertex-Buffer-Objects-VBO-and-Vertex-Array-Objects-VAO" class="headerlink" title="Vertex Buffer Objects (VBO) and Vertex Array Objects (VAO)"></a>Vertex Buffer Objects (VBO) and Vertex Array Objects (VAO)</h3><p>Data transferring between main memory and graphics memory are expensive. It is not very efficient to transfer memory on each draw operation. OpenGL ES 3 supports creating a buffer on the graphics memory and storing data there, so that drawing is more efficient. Users can create a buffer by glGenBuffers and store by glBufferData. This is known as Vertex Buffer Objects. Because there are fixed number of buffer targets, users can use Vertex Array Objects to store multiple vertex array data, vertex indices data, etc. in different places.</p><h3 id="Textures"><a href="#Textures" class="headerlink" title="Textures"></a>Textures</h3><p>Textures can be applied when drawing objects. You can create a texture by glGenTextures and input the bitmap data into the texture by glTexImage2D. Then you can access texture data in shader programs by a sampler2D uniform.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;tyz is currently developing a &lt;a href=&quot;https://github.com/rg526/rg526&quot;&gt;game&lt;/a&gt; based on OpenGL ES 3.0 for 3D graphics. This article will</summary>
+      
+    
+    
+    
+    
+    <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Demosplash 2021!</title>
+    <link href="https://hyabc.github.io/demosplash-2021/"/>
+    <id>https://hyabc.github.io/demosplash-2021/</id>
+    <published>2021-11-13T03:23:18.000Z</published>
+    <updated>2021-11-13T03:26:53.630Z</updated>
+    
+    <content type="html"><![CDATA[<p>CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!</p><img src="/images/demosplash/1.jpg" style="height: 200px;"><img src="/images/demosplash/2.jpg" style="height: 200px;"><img src="/images/demosplash/3.jpg" style="height: 200px;"><img src="/images/demosplash/4.jpg" style="height: 200px;"><img src="/images/demosplash/5.jpg" style="height: 200px;"><img src="/images/demosplash/6.jpg" style="height: 200px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!&lt;/p&gt;
+&lt;img src=&quot;/images/demosplash/1.jpg&quot; style=&quot;height</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Homecoming Week 2021</title>
+    <link href="https://hyabc.github.io/homecoming-2021/"/>
+    <id>https://hyabc.github.io/homecoming-2021/</id>
+    <published>2021-11-06T17:21:28.000Z</published>
+    <updated>2021-11-06T17:23:40.042Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://www.cmu.edu/piper/news/archives/2021/november/tartan-community-day.html">Homecoming Week!</a></p><img src="/images/homecoming-2021.jpg" style="height: 400px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.cmu.edu/piper/news/archives/2021/november/tartan-community-day.html&quot;&gt;Homecoming Week!&lt;/a&gt;&lt;/p&gt;
+&lt;img src=&quot;/images/home</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>RLC Circuit Review</title>
+    <link href="https://hyabc.github.io/rlc-review/"/>
+    <id>https://hyabc.github.io/rlc-review/</id>
+    <published>2021-10-03T01:52:42.000Z</published>
+    <updated>2021-10-05T02:24:04.113Z</updated>
+    
+    <content type="html"><![CDATA[<p>tyz is going to have a 18220 midterm next week so he is going to review some simple RLC circuits!</p><h3 id="RC"><a href="#RC" class="headerlink" title="RC"></a>RC</h3><p>Imagine there is a resistor and a capacitor connected in serial. Let $I_C$ be the current passing through the capacitor, $V_C$ be the voltage across the capacitor. Then the voltage across the resistor is $-V_C$. Assume the initial voltage across the capacitor is $V_0$.</p><p>Since $I_C = C{ {d V_C} \over {d t} }$, we have $R C{ {d V_C} \over {d t} } + V_C = 0$, and ${ {d V_C} \over {d t} } + {1 \over {RC} } V_C = 0$. Solving this equation we have $V_C = A e^{- {t \over {RC} } }$. Applying the initial value, we have $V_C = V_0 e^{- {t \over {RC} } }$. Let time constant $\tau = RC$, $V_C = V_0 e^{- {t \over \tau} }$</p><h3 id="RC-with-voltage-source"><a href="#RC-with-voltage-source" class="headerlink" title="RC with voltage source"></a>RC with voltage source</h3><p>There is a resistor and a capacitor, and also a voltage source $V_0$ in serial. This time we assume initial voltage across the capacitor is 0V. As capacitor eventually become open circuit, we know the voltage across capacitor eventually becom $V_0$.</p><p>Since $I_C = C{ {d V_C} \over {d t} }$, we have $R C{ {d V_C} \over {d t} } + V_C = V_0$, or ${ {d V_C} \over {d t} } + { {V_C} \over {RC} } = { {V_0} \over {RC} }$. Solving this differential equation, we have $V_C = A e^{- {t \over {RC} } } + V0$. Applying initial value we have $V_C = A (1 - e^{- {t \over \tau} })$.</p><h3 id="RL"><a href="#RL" class="headerlink" title="RL"></a>RL</h3><p>Imagine there is a resisor and an inductor connected in serial. Let $I_L$ be the current passing through the inductor (and also the resistor), $V_L$ be the voltage across the inductor. Assume initial current passing the inductor is $I_0$.</p><p>Since $V_L = L { {d I_L} \over {dt} }$, we have $L { {d I_L} \over {dt} } + R I_L = 0$, or ${ {d I_L} \over {dt} } + {R \over L} I_L = 0$. Solving this we got $I_L = A e^{- {R \over L} t }$. Let $\tau = {L \over R}$ and applying initial value, we have $I_L = I_0 e^{- {t \over \tau} }$.</p><h3 id="RL-with-voltage-source"><a href="#RL-with-voltage-source" class="headerlink" title="RL with voltage source"></a>RL with voltage source</h3><p>Now we have a voltage source $V_0$ in addition! As inductor eventually become short circuit, we know the current through the inductor eventually become $I_0$. Assume initial current through the inductor is 0A.</p><p>Since $V_L = L { {d I_L} \over {dt} }$, we have $L { {d I_L} \over {dt} } + R I_L = V_0$, ${ {d I_L} \over {dt} } + {R \over L} I_L = {V_0 \over L}$. So we have $I_L = {V_0 \over R} + A e^{- {t \over \tau} }$. Applying the initial value we have $I_L = {V_0 \over R} (1 -  e^{- {t \over \tau} })$.</p><h3 id="LC"><a href="#LC" class="headerlink" title="LC"></a>LC</h3><p>Imagine there is a inductor and a capacitor in serial, and we want to know the voltage across the capacitor $V_C$. Then voltage across inductor is $-V_C$.</p><p>By $I = C{ {d V_C} \over {dt} }$ and $-V_C = L { {dI} \over {dt} }$, we have $-V_C = LC { {d^2 V_C} \over {dt^2} }$, or ${ {d^2 V_C} \over {dt^2} } + {V_C \over {LC} } = 0$. Let $\omega_0 = \sqrt{1 \over {LC} }$, we have $V_C = C_1 \cos (\omega_0 t) + C_2 \sin (\omega_0 t)$, and $V_C = R \sin (\omega_0 t + \phi)$. </p><h3 id="RLC"><a href="#RLC" class="headerlink" title="RLC"></a>RLC</h3><p>Now suppose we have a resistor, a inductor and a capacitor in parallel! And we also want to know $V_C$. </p><p>Since $-V_C - IR = L { {dI} \over {dt} }$, we have ${ {d^2 V_C} \over {dt^2} } + {R \over L} { {d V_C} \over {dt} } +  {V_C \over {LC} } = 0$. Let $\alpha = {R \over {2L} }$, solving $r^2 + 2\alpha r + (\omega_0)^2 = 0$. Now solution is (assume $\omega_0 &gt; \alpha$), let $\mu = \sqrt{\omega_0 ^ 2 - \alpha ^ 2}$, $V_C = e ^ {-\alpha} (C_1 \cos (\mu t) + C_2 \sin (\mu t) )$, and $V_C  = e ^ {-\alpha} R \sin (\mu t + \phi) $</p><h3 id="Other-circuits"><a href="#Other-circuits" class="headerlink" title="Other circuits"></a>Other circuits</h3><p>For more complex circuits, we can always do nodal analysis! (QAQ)</p><ol><li>Label nodes and their voltages</li><li>Write KCL formulas</li><li>For voltage source, create a new variable of the current flowing through it and add an equation about the voltage difference across it</li><li>For inductor, create a new variable of the current flowing through it and add an equation about the inductor voltage-current relation</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;tyz is going to have a 18220 midterm next week so he is going to review some simple RLC circuits!&lt;/p&gt;
+&lt;h3 id=&quot;RC&quot;&gt;&lt;a href=&quot;#RC&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    
+    <category term="RLC" scheme="https://hyabc.github.io/tags/RLC/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MOSFET Review</title>
+    <link href="https://hyabc.github.io/mosfet-review/"/>
+    <id>https://hyabc.github.io/mosfet-review/</id>
+    <published>2021-09-21T01:43:17.000Z</published>
+    <updated>2021-09-21T02:01:04.153Z</updated>
+    
+    <content type="html"><![CDATA[<p>MOSFET has the following operation regions: </p><ul><li><p>Cutoff region: When $V_{GS} &lt; V_{TH}$. MOSFET acts like open circuit.</p></li><li><p>Triode region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &lt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} = {k \over 2} [ 2 (V_{GS} - V_{TH}) V_{DS} - V_{DS}^2 ]$. When $V_{DS}$ is very small, this is approximately $I_{D} = k (V_{GS} - V_{TH}) V_{DS}$ and the MOSFET can be regarded as a resistor of resistance $R_{ch} = k (V_{GS} - V_{TH})$.<br>It’s common to use this region in digital circuit because it behaves like a digital switch whose resistance is either 0 or $R_{ch}$.</p></li><li><p>Saturation region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &gt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} = {k \over 2} ( V_{GS} - V_{TH} )^2$. The MOSFET can be regarded as a voltage-controlled current source.<br>It’s common to use this region in analog circuit because it provides the largest gain from input $V_{GS}$.</p></li></ul><p>The above are for NMOS. For PMOS, change the sign of $V_{GS}$, $V_{TH}$ and $V_{DS}$ and other things are similar.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;MOSFET has the following operation regions: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Cutoff region: When $V_{GS} &amp;lt; V_{TH}$. MOSFET acts like open circuit.&lt;/p&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="MOSFET" scheme="https://hyabc.github.io/tags/MOSFET/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>White Album 2</title>
+    <link href="https://hyabc.github.io/white-album-2/"/>
+    <id>https://hyabc.github.io/white-album-2/</id>
+    <published>2021-08-03T21:55:34.000Z</published>
+    <updated>2021-08-09T08:07:34.676Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>白色相簿什么的已经无所谓了。<br>因为已经不再有歌，值得去唱了。<br>传达不了的恋情已经不需要了。<br>因为已经不再有人，值得去爱了。<br>&nbsp;  &mdash; 白色相簿2 CC篇 </p></blockquote><p>最近玩了一下<a href="https://en.wikipedia.org/wiki/White_Album_2">白色相簿2</a>。首先感觉是超级胃疼啊啊啊！！！这是第一部使我玩的这么难受的Galgame… TAT</p><p>白色相簿2中令人痛苦的场景有太多了…雪菜生日时冬马对春希远离自己的场景（”为什么你会这么熟练啊？你和雪菜，到底接吻了多少次啊！”虽然有点想笑～），在机场送别冬马时雪菜看着春希跑过去和冬马接吻的场景（”世界名画”），雪菜在宾馆里看着春希看冬马杂志的场景，三女线中春希一边背叛着雪菜一边给雪菜发短信的场景（实在太恐怖了！！！真的好想吐啊！），三女线末尾部分春希向雪菜分手并雪菜告别的场景（一首Answer送给雪菜QuQ），还有雪菜两次生日时二选一令另一个人独自等待的场景…相当的情感上受打击呢&gt;_&lt;</p><p>更加糟糕的是，我觉得白2中没有彻底的坏人。春希是一个认真并且热心帮助他人的人，也会尽量不让任何人受伤。（虽然在崩溃的状态下可能做出非常奇怪的事情：”给千晶打电话？去编辑部露面？那种事，怎么能去考虑？”）（但是春希确实过于擅长说谎了）不让任何人受伤的原则却使他进入了一个非常糟糕的局面。所以，为什么会变成这样呢？？？</p><figure><img src="/images/wa2.jpg"/><figcaption>喵喵喵？？？怎么办怎么办？？？</figcaption></figure><p>白色相簿2中我最喜欢的音乐是”雪菜处刑曲”（就是春希向雪菜提出分手时播放的BGM） <a href="https://m.youtube.com/watch?v=h48OhvXCv1o">Answer</a>！ 好像是雪菜和春希CV一起唱的（手动滑稽）（这样感觉超级对不起雪菜啊～～～）同时<a href="https://www.youtube.com/watch?v=PkJ8yZ7rAzY">Honesty</a>, <a href="https://www.youtube.com/watch?v=nScmTvAZlIk">Twinkle Snow</a>, <a href="https://www.bilibili.com/video/BV1FE411q7et">无法传递的爱恋</a> 我也觉得相当好听！</p><p>总之，尽管故事相当致郁，白色相簿2确实是一部相当值得尝试的作品！（Warning：同时是脱宅神作！我现在完全没有勇气再去玩新的Galgame了…）所以说，感觉恋爱好残酷啊！！！本该是雪菜冬马春希千晶小春麻理所有人都是可以成为朋友的…但是，为什么，会变成这样呢……</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;白色相簿什么的已经无所谓了。&lt;br&gt;因为已经不再有歌，值得去唱了。&lt;br&gt;传达不了的恋情已经不需要了。&lt;br&gt;因为已经不再有人，值得去爱了。&lt;br&gt;&amp;nbsp;  &amp;mdash; 白色相簿2 CC篇 &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;最近</summary>
+      
+    
+    
+    
+    
+    <category term="Game" scheme="https://hyabc.github.io/tags/Game/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project Radiation</title>
+    <link href="https://hyabc.github.io/project-radiation/"/>
+    <id>https://hyabc.github.io/project-radiation/</id>
+    <published>2021-07-20T18:12:08.000Z</published>
+    <updated>2021-07-27T08:12:44.923Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I like using <a href="https://miniflux.app/">Miniflux</a> to read RSS feeds! Miniflux has a very nice web UI to read articles and manage feeds/categories. But sometimes I’m too lazy to open a browser to read news. So I decided to write a simple CLI client using Miniflux API.</p><h3 id="Project-Radiation"><a href="#Project-Radiation" class="headerlink" title="Project Radiation"></a>Project Radiation</h3><p>With Project Radiation, you can read news articles directly in your terminal! The program uses a command prompt to select between listing entry list, displaying article content, and switching to next/previous pages. And paging is supported both on entry list and article content. The default action (empty command) is to display the first available article and its consecutive pages, so that normally the only thing users needs to do is press Enter repeatedly. You can see the command prompt being “&gt; “ in normal mode and “(id) &gt;” in article paging mode (activated when an article has more than one page).</p><h3 id="External-Program"><a href="#External-Program" class="headerlink" title="External Program"></a>External Program</h3><p><a href="https://lynx.browser.org/">Lynx</a> is used to convert article content formatted in HTML into text strings to display in terminal, and it is called using the <code>exec</code> package.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This is my first project using Go and programming in Go is fun! Returning <code>error</code> is more intuitive than the exception system in C++/Java and helps me write better error handling code, there are many useful packages built-in such as <code>net/http</code> and JSON encoding which is easy to use, calling external program and redirecting its stdin/stdout is easier than manually fork-exec-pipe-dup2 in C, and I implemented most features in Project Radiation faster than I expected.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Background&quot;&gt;&lt;a href=&quot;#Background&quot; class=&quot;headerlink&quot; title=&quot;Background&quot;&gt;&lt;/a&gt;Background&lt;/h3&gt;&lt;p&gt;I like using &lt;a href=&quot;https://miniflux</summary>
+      
+    
+    
+    
+    
+    <category term="Go" scheme="https://hyabc.github.io/tags/Go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project Railway Documentation</title>
+    <link href="https://hyabc.github.io/railway-doc/"/>
+    <id>https://hyabc.github.io/railway-doc/</id>
+    <published>2021-07-07T01:25:41.000Z</published>
+    <updated>2021-07-07T01:10:47.433Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>In recent days I was debugging some strange crashes of Project Railway. The <code>railway</code> process sometimes receives signal SIGSEGV when calling <code>gst_player_new</code> or <code>gst_player_play</code>. After <a href="https://github.com/hyabc/railway/commit/919ff52357ee721826007cfcf7d8de58fed931cd">switching</a> to calling the <code>mpg123</code> program by fork-exec as music playing backend, currently there are no crashes. Maybe I should write some documentation to explain the program.</p><h3 id="RailwayMusic"><a href="#RailwayMusic" class="headerlink" title="RailwayMusic"></a>RailwayMusic</h3><p>RailwayMusic does the actual work by calling <code>mpg123</code>, using its remote control mode.</p><p><code>void init_music()</code>: Constructor function; launch mpg123 and create read/write file pointers that sends to mpg123; launch <code>music_wait</code> thread.<br><code>void destroy_music()</code>: Destructor function; cancel and wait for the thread; tells mpg123 to quit and wait for it.<br><code>void music_play(song_type*)</code>: Ask mpg123 to stop and load this song.<br><code>void music_volume(double)</code>: Pass volume to mpg123.<br><code>void music_pause_trigger()</code>: Pass pause to mpg123.<br><code>bool music_is_playing()</code>: Get the play state boolean.<br><code>void* music_wait(void*)</code>: Thread that continuously read output of mpg123.<br><code>int music_update(void*)</code>: Update function that run every 1 sec in the main thread to update progress bar and switch to next song if necessary.</p><h3 id="RailwayPlaylist"><a href="#RailwayPlaylist" class="headerlink" title="RailwayPlaylist"></a>RailwayPlaylist</h3><p>RailwayPlaylist is a simple part to maintain current playlist. It contains the current track index in <code>playlist_ptr</code>.</p><p><code>void init_playlist()</code>: Constructor function; init vars.<br><code>void destroy_playlist()</code>: Destructor function; cleanup <code>playlist_array</code> if necessary; reset vars.<br><code>void generate_playlist(song_type*)</code>: Generate playlist array by cloning the current <code>song_array</code>.<br><code>void playlist_next()</code>: Modify <code>playlist_ptr</code>; calls <code>play_song</code> to do actual music playing.<br><code>void playlist_prev()</code>: Similar to <code>playlist_next</code>.<br><code>void playlist_play(song_type*)</code>: To play a new song that changes the playlist. First destroy and regenerate the playlist, and call <code>play_song</code>.<br><code>void playlist_set_shuffle(bool)</code>: Set shuffle status.<br><code>void playlist_set_repeat(bool)</code>: Set repeat status.</p><h3 id="RailwayLib"><a href="#RailwayLib" class="headerlink" title="RailwayLib"></a>RailwayLib</h3><p>RailwayLib manages the library of albums and songs, configuration file, and gets music tags to sort songs by track id.</p><p><code>void init_library()</code>: Constructor function; get configuration values; init the <code>gst_discoverer</code> to get tags.<br><code>void destroy_library()</code>: Destructor function; cleanup resources.<br><code>void generate_album_list()</code>: To generate <code>album_array</code>; iterate over library directories and artist directories to generate a linked list of albums and convert to array (to find out number of albums and malloc accordingly).<br><code>void generate_song_list(const album_type*)</code>: To generate <code>song_array</code>; iterate over each (regular) song file in a given album directory; create linked list and song array.<br><code>void destroy_album_list()</code>: Cleanup album array.<br><code>void destroy_song_list()</code>: Cleanup song array.<br><code>void generate_album_button_image(GTask*, void*, album_type*, void*)</code>: Function for GTask thread to generate album cover picture; Get any song in the album; check if existing picture exist, and if not exist generate one using <code>ffmpeg -n -i &lt;song filename&gt; &lt;image filename&gt;</code>.</p><h3 id="Railway"><a href="#Railway" class="headerlink" title="Railway"></a>Railway</h3><p>Railway controls all GUI elements and sets their handlers.</p><p><code>void music_position_update_cb(int, int)</code>: Update the song progress bar; called from update function in railwaymusic.<br><code>void music_pause_button_trigger_cb(GtkWidget*, void*)</code>: Update the icon of the play/pause trigger button; call railwaymusic to trigger pause.<br><code>void play_song(song_type*)</code>: Setting labels and images in the interface and pass to <code>music_play</code>; called from railwayplaylist.<br><code>void init_albums()</code>: Create album button grid.<br><code>void destroy_albums()</code>: Cleanup album button array.<br><code>void init_window()</code> &amp;&amp; <code>void init_control()</code>: Set signal handlers.<br><code>bool substring_test(const char*, const char*)</code>: Substring test (case insensitive).<br><code>bool search_judge(album_type*, const char*)</code>: Test if an album contains the given search term.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Background&quot;&gt;&lt;a href=&quot;#Background&quot; class=&quot;headerlink&quot; title=&quot;Background&quot;&gt;&lt;/a&gt;Background&lt;/h3&gt;&lt;p&gt;In recent days I was debugging some st</summary>
+      
+    
+    
+    
+    
+    <category term="Gtk+" scheme="https://hyabc.github.io/tags/Gtk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project Railway!</title>
+    <link href="https://hyabc.github.io/project-railway/"/>
+    <id>https://hyabc.github.io/project-railway/</id>
+    <published>2021-06-18T15:29:55.000Z</published>
+    <updated>2021-06-21T13:35:38.750Z</updated>
+    
+    <content type="html"><![CDATA[<p>Background: I was using Rhythmbox to listen to music in GNOME desktop environment. Rhythmbox is an awesome and powerful music player. But several days ago, I think maybe browsing albums in the form of album cover picture grid will look better than browsing albums in album name list, so I start this project.</p><p><a href="https://github.com/hyabc/railway">Project Railway</a> is a Gtk+ music player. It consists of the following parts:</p><ul><li>railway: GUI part. Controls all widgets. Also, calls the ffmpeg program to generate album cover picture for each album asynchronously with GTask, to not block GUI with time-consuming operation.</li><li>railwaylibrary: Reads music library and generates arrays of song and album information. And uses GStreamer GstDiscoverer to retrieve song metadata, or “tags”, to sort music in track order.</li><li>railwaymusic: The actual music player part. Calls GStreamer GstPlayer to do all the work.</li><li>railwayplaylist: Manages the playlist by cloning a copy of song array.</li></ul><p>The resulting music player looks like:</p><img src="/images/railway.jpg"/><p>UPD: Support searching by album name or artist name now!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Background: I was using Rhythmbox to listen to music in GNOME desktop environment. Rhythmbox is an awesome and powerful music player. But</summary>
+      
+    
+    
+    
+    
+    <category term="Gtk+" scheme="https://hyabc.github.io/tags/Gtk/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AMD Yes!</title>
+    <link href="https://hyabc.github.io/amd-yes/"/>
+    <id>https://hyabc.github.io/amd-yes/</id>
+    <published>2021-05-31T15:22:47.000Z</published>
+    <updated>2021-06-04T02:56:09.989Z</updated>
+    
+    <content type="html"><![CDATA[<p>AMD YES!</p><img src="/images/amd.jpg" style="height: 150px;"><p>Linux installs without any problem. The only issue is battery drain when poweroff (which is strange), and downgrading BIOS to version 1.29 solves this.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;AMD YES!&lt;/p&gt;
+&lt;img src=&quot;/images/amd.jpg&quot; style=&quot;height: 150px;&quot;&gt;
+
+&lt;p&gt;Linux installs without any problem. The only issue is battery drain w</summary>
+      
+    
+    
+    
+    
+    <category term="AMD" scheme="https://hyabc.github.io/tags/AMD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Project Ran!</title>
+    <link href="https://hyabc.github.io/project-ran/"/>
+    <id>https://hyabc.github.io/project-ran/</id>
+    <published>2021-05-25T18:33:28.000Z</published>
+    <updated>2021-05-25T09:17:48.478Z</updated>
+    
+    <content type="html"><![CDATA[<p>Project Ran is a javascript project. I’m learning js this summer because my previous web projects (like Project HTIC) rely on jumping to other pages to respond to any user action, which makes user experience not  responsive. </p><p>Javascript has many interesting features. It is not typed (you can assign a variable with a string then an integer, like in Python). Functions can be defined directly into a variable and that variable can be called. Function can be used to create objects using the new operator. And JSON is native here.</p><p><a href="https://github.com/hyabc/ran">Project Ran</a> aims to implement a STG game similar to <a href="https://www16.big.or.jp/~zun/">Touhou Project</a> in javascript. In  <a href="https://en.wikipedia.org/wiki/Imperishable_Night">Touhou Eiyashou ~ Imperishable Night</a> (東方永夜抄 ~ Imperishable Night), Yakumo Ran (八雲藍, blue) is the shikigami of Yakumo Yukari (八雲紫, purple). Ran is used as project name here because <a href="https://thwiki.cc/%E4%B8%9C%E6%96%B9%E6%B1%82%E9%97%BB%E5%8F%B2%E7%BA%AA/%E5%85%AB%E4%BA%91%E8%93%9D">Ran is relatively like a computer</a>.</p><img src="/images/ran.jpg" style="height: 300px;"><p>I think the basic features of a STG game have been implemented, including entrance/game interfaces, bullet drawing and shooting, judge of player and enemy damage, high/low speed change, life/bomb counting, so at least it is runnable. But many things should be improved, including better art, game story, enemy characters, and better animations, like player start or bombing effect in 東方永夜抄. The animations look primitive now. It takes me many time and code to draw simple animation like circle animations at speedchange event. </p><p>The basic object for drawing things is <em>shape</em>. Then a <em>bullet_array</em> helps manage an array of <em>shapes</em> (bullets) shoot by <em>player</em> and <em>enemy</em>. A <em>player</em> or <em>enemy</em> has-a <em>shape</em> to represent themselves and a <em>bullet_array</em> to represent the bullets they shoot. A <em>arena_game</em> maintains currently active enemies, invoke <em>player</em> and <em>enemy</em> to draw and judge bullet damage. A <em>game</em> either has-a <em>arena_game</em> or a <em>arena_text</em> (which displays text on screen) depending on the story. </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Project Ran is a javascript project. I’m learning js this summer because my previous web projects (like Project HTIC) rely on jumping to </summary>
+      
+    
+    
+    
+    
+    <category term="Javascript" scheme="https://hyabc.github.io/tags/Javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Goodbye, Spring 2021</title>
+    <link href="https://hyabc.github.io/goodbye-spring-2021/"/>
+    <id>https://hyabc.github.io/goodbye-spring-2021/</id>
+    <published>2021-05-09T21:58:13.000Z</published>
+    <updated>2021-05-10T08:01:00.391Z</updated>
+    
+    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=428203074&auto=0&height=66"></iframe><p>Spring 2021 马上就要结束了呢。</p><p>这个学期学到了很多有趣的内容！数学学了R2/R3上的微分（用partial derivative），积分（用Fubini Theorem和换元解决），以及scalar/vector surface integral。写作学了很多有用的知识（例如MLA格式，abstract, acknowledgement, Thesis-driven/IMRAD, novelty moves, 以及其他有趣的技巧）。计算机学了DFA, TM, Cook/Karp reduction, 随机/近似算法，还有对很多高级内容的入门。所以这个学期还是相当亦可赛艇的（笑）</p><p>暑假准备玩一下Go！</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=4282</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vertex Cover, Independent Set, Clique, and Matching</title>
+    <link href="https://hyabc.github.io/vc-ind-clique-matching/"/>
+    <id>https://hyabc.github.io/vc-ind-clique-matching/</id>
+    <published>2021-04-23T14:11:36.000Z</published>
+    <updated>2021-04-23T03:09:11.415Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Independent-set-lt-gt-clique"><a href="#Independent-set-lt-gt-clique" class="headerlink" title="Independent set &lt;=&gt; clique"></a>Independent set &lt;=&gt; clique</h3><p>An independent set S of G corresponds to a clique containing the same set of vertices S in G’s complement graph (flipping edges in E and not in E). This is because all vertex pair (i, j) in S is not an edge in G is equivalent to all vertex pair (i, j) in S is an edge in G’s complement graph.</p><hr><h3 id="Vertex-cover-lt-gt-independent-set"><a href="#Vertex-cover-lt-gt-independent-set" class="headerlink" title="Vertex cover &lt;=&gt; independent set"></a>Vertex cover &lt;=&gt; independent set</h3><p>A vertex cover S in graph G corresponds to an independent set $V \setminus S$ in G. If S is a valid vertex cover, any vertex pair (i, j) in  $V \setminus S$ is not an edge in G, so  $V \setminus S$ is independent set. If  $V \setminus S$ is an independent set, for any edge at least one endpoint is in S, so S is a vertex cover. Then MIN-VERTEX-COVER = MAX-INDEPENDENT-SET.</p><hr><h3 id="Vertex-cover-lt-gt-matching-in-bipartite-graph"><a href="#Vertex-cover-lt-gt-matching-in-bipartite-graph" class="headerlink" title="Vertex cover &lt;=&gt; matching (in bipartite graph)"></a>Vertex cover &lt;=&gt; matching (in bipartite graph)</h3><p>In bipartite graph, the size of any matching is less or equal than the size of any vertex cover, and MAX-MATCHING = MIN-VERTEX-COVER.</p><h4 id="a-Any-matching-lt-any-vertex-cover"><a href="#a-Any-matching-lt-any-vertex-cover" class="headerlink" title="(a) Any matching &lt;= any vertex cover"></a>(a) Any matching &lt;= any vertex cover</h4><p>Given a matching in a bipartite graph, we need to select at least one vertex from every matched edge. Otherwise, there exist matched edge that isn’t covered. So matching &lt;= vertex cover.</p><h4 id="b-MAX-MATCHING-MIN-VERTEX-COVER"><a href="#b-MAX-MATCHING-MIN-VERTEX-COVER" class="headerlink" title="(b) MAX-MATCHING = MIN-VERTEX-COVER"></a>(b) MAX-MATCHING = MIN-VERTEX-COVER</h4><p>From a maximum matching M, we can construct a vertex cover by (1) direct all matched edge from Y to X and all unmatched edge from X to Y, (2) run a DFS from all unmatched vertices in X, and (3) construct set R by all unvisited vertices in X and all visited vertices in Y.</p><p>The only type of edge that has both endpoints not in R consists of a visited vertex u in X and a unvisited vertex v in Y. If {u, v} is a unmatched edge, then v should be reachable by appending (u, v) to the path to u. If {u, v} is a matched edge, then the only incoming edge towards u  is (v, u). Then u cannot be reachable if v is unreachable. Both cases lead to contradiction. So all edge contains some endpoint in R and R is a valid vertex cover.</p><p>Unvisited vertices in X corresponds to a matched edge (otherwise they will be initially visited by DFS). Visited vertices in Y corresponds to a matched edge (otherwise we have an augmenting path between two unmatched vertices, but M is a maximum matching). Because unvisited vertices in X are not reachable, these edges can not intersect. So |R| &lt;= |M|. Then there exist some vertex cover whose size is at most |M|, so MIN-VERTEX-COVER &lt;= |M|, and MIN-VERTEX-COVER = MAX-MATCHING.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Independent-set-lt-gt-clique&quot;&gt;&lt;a href=&quot;#Independent-set-lt-gt-clique&quot; class=&quot;headerlink&quot; title=&quot;Independent set &amp;lt;=&amp;gt; clique&quot;&gt;&lt;/</summary>
+      
+    
+    
+    
+    
+    <category term="Graph" scheme="https://hyabc.github.io/tags/Graph/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Google Code Jam 2021 Round 1a Solution</title>
+    <link href="https://hyabc.github.io/gcj-2021-1a/"/>
+    <id>https://hyabc.github.io/gcj-2021-1a/</id>
+    <published>2021-04-13T20:45:50.000Z</published>
+    <updated>2021-04-14T11:29:22.103Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Append-Sort"><a href="#Append-Sort" class="headerlink" title="Append Sort"></a>Append Sort</h3><h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p>Given n-length array, $n \leq 100$, each number is in $1 \leq X_i \leq 10^9$, make this array strictly-increasing by appending digit to any number. Return minimum number of digit needed.</p><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>Greedy, if $X_i \geq X_{i + 1}$, try to make $len(X_{i + 1})$ equal to $len(X_i)$ or $len(X_i)+1$ by comparing their prefix.</p><hr><h3 id="Prime-Time"><a href="#Prime-Time" class="headerlink" title="Prime Time"></a>Prime Time</h3><h4 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h4><p>Given a set of at most $10^{15}$ primes, each prime within $2 \leq p_i \leq 500$, return maximum value of $\sum_{p_i \not\in S} p_i = \prod_{p_i \in S} p_i$ if there exist valid solution.</p><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>Test set 1-2 (at most 100 total primes): Since $W = \sum_{p_i \not\in S} p_i \leq \sum p_i \leq 50000$, the product of primes is inside 50000, so we can search for set S such that $\sum_{p_i \in S} p_i + \prod_{p_i \in S} p_i = W$. This can be done in a DP-like way.</p><p>Test set 3: W is very large. $\prod_{p_i \in S} p_i \leq \sum p_i \leq 5 \times 10^{17}$, each prime is at least 2, so $|S| \leq 60$, so $\sum_{p_i \in S} p_i \leq 60 \times 500=30000$. Then the valid solution is in $[W - 30000, W]$ because $ans = \prod_{p_i \in S} p_i = W - \sum_{p_i \in S} p_i$. </p><p>And the solution value is products of primes in $[2, 500]$. So try and factorize every number in this region and see if it can be expressed by product of available primes and has valid sum.</p><hr><h3 id="Hacked-Exam"><a href="#Hacked-Exam" class="headerlink" title="Hacked Exam"></a>Hacked Exam</h3><h4 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h4><p>There are Q true/false problems, given n people’s solution sequence and number of correct answer, all consistent answer sequence have same probability, return a sequence with maximum expected number of correct answer.</p><h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>Test set 1-2 ($n \leq 2, Q \leq 40$): We can use DP to compute number of consistent sequence, and for each bit, compute the number of consistent sequence specifying this bit is true/false. Then we have the expected value of each bit being true/false, and sum because of the linearity of expectation.</p><p>Test set 3 ($n \leq 3, Q \leq 120$): There are limited types of questions: when n = 3, there are 8 types of questions: FFF, FFT, …, TTT. Symmetrically (by flipping the result in the end to make FFT type -&gt; TTF type), there are only 4 types of questions. We can brute-force number of consistent sequences by counting number of T out of all available T/F (or number of questions in such type) in each of four type, times some combinatorics number, this takes $O((Q/4)^4)$. Then do in a similar way as previous case and count number of consistent sequences after specifying T/F for each bit. </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;Append-Sort&quot;&gt;&lt;a href=&quot;#Append-Sort&quot; class=&quot;headerlink&quot; title=&quot;Append Sort&quot;&gt;&lt;/a&gt;Append Sort&lt;/h3&gt;&lt;h4 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; c</summary>
+      
+    
+    
+    
+    
+    <category term="Google Code Jam" scheme="https://hyabc.github.io/tags/Google-Code-Jam/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>NAT Penetration using FRP</title>
+    <link href="https://hyabc.github.io/frp-tutorial/"/>
+    <id>https://hyabc.github.io/frp-tutorial/</id>
+    <published>2021-04-11T19:18:49.000Z</published>
+    <updated>2021-04-13T09:25:52.269Z</updated>
+    
+    <content type="html"><![CDATA[<p>NAT penetration is useful in many cases. For example, if your ISP uses Carrier Grade NAT (CGNAT) and does not have a public IP address, you will need it to expose local service to be accessible from the public Internet. <a href="https://github.com/fatedier/frp%22">FRP</a> is one powerful and simple to use NAT penetration tool. <a href="https://github.com/fatedier/frp/blob/master/README.md">FRP documentation</a> has more information on using FRP.</p><p>To use frp, first download frp server and client (frps and frpc) binaries, and create a regular user for frps/frpc with useradd on the server and client for security reason.</p><h3 id="Server-configuration"><a href="#Server-configuration" class="headerlink" title="Server configuration"></a>Server configuration</h3><p>FRP server binds a main port for the tunnel traffic, as well as allows clients to map other server ports back to client services. Then, client services can be accessed using server ip and the reqested port.</p><p>Server can specify a simple token or password to authenicate client. FRP also supports using OpenID for authenication.</p><p>The server also needs to open the TCP or UDP (if KCP is used) port in the firewall to allow incoming traffic.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">bind_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="attr">kcp_bind_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="attr">allow_ports</span> = &lt;allowed mapping port region&gt;</span><br><span class="line"><span class="attr">authentication_method</span> = token</span><br><span class="line"><span class="attr">token</span> = &lt;token&gt;</span><br></pre></td></tr></table></figure><p>Also, you can create a systemd service to control the frps process. Client can configure systemd service in a similar way.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=&lt;your description&gt;</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=simple</span><br><span class="line"><span class="attr">User</span>=frps</span><br><span class="line"><span class="attr">Group</span>=frps</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">5</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/bin/frps -c /etc/frp/frps.ini</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure><h3 id="Client-configuration"><a href="#Client-configuration" class="headerlink" title="Client configuration"></a>Client configuration</h3><p>Client connects to server port and requests to map local service to one server port. You can optionally use KCP instead of usual TCP as transport protocol for tunnel traffic, because KCP is a UDP-based protocol and it can reduce service latency. </p><p>One client configuration file can contain multiple services and request one server port for each service. Also optionally enable or disable compression and encryption for each service.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = &lt;server address&gt;</span><br><span class="line"><span class="attr">server_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="comment"># protocol = kcp</span></span><br><span class="line"><span class="attr">authentication_method</span> = token</span><br><span class="line"><span class="attr">token</span> = &lt;token&gt;</span><br><span class="line"></span><br><span class="line"><span class="section">[&lt;service name&gt;]</span></span><br><span class="line"><span class="attr">type</span> = tcp/udp</span><br><span class="line"><span class="attr">local_ip</span> = localhost</span><br><span class="line"><span class="attr">local_port</span> = &lt;local service port&gt;</span><br><span class="line"><span class="attr">remote_port</span> = &lt;requested server port&gt;</span><br><span class="line"><span class="comment"># use_encryption = true</span></span><br><span class="line"><span class="comment"># use_compression = true</span></span><br></pre></td></tr></table></figure><p>Finally, enable and start both frps and frpc with systemd, and your local service should be accessible from the Internet!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;NAT penetration is useful in many cases. For example, if your ISP uses Carrier Grade NAT (CGNAT) and does not have a public IP address, y</summary>
+      
+    
+    
+    
+    
+    <category term="FRP" scheme="https://hyabc.github.io/tags/FRP/"/>
+    
+  </entry>
+  
+</feed>
