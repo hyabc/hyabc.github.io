@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyabc.github.io/quotes/index.html</loc>
+    
+    <lastmod>2022-05-04</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/computer-design/</loc>
     
     <lastmod>2022-03-26</lastmod>
@@ -12,13 +19,6 @@
     <loc>https://hyabc.github.io/ecna21/</loc>
     
     <lastmod>2022-03-11</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://hyabc.github.io/quotes/index.html</loc>
-    
-    <lastmod>2022-03-09</lastmod>
     
   </url>
   
