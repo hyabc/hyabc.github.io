@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-03-26T00:42:50.001Z</updated>
+  <updated>2022-05-05T02:11:23.929Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>213 Reflection</title>
+    <link href="https://hyabc.github.io/213-reflection/"/>
+    <id>https://hyabc.github.io/213-reflection/</id>
+    <published>2022-05-05T01:36:48.000Z</published>
+    <updated>2022-05-05T02:11:23.929Z</updated>
+    
+    <content type="html"><![CDATA[<p>Introduction to Computer Systems (213) is a famous sophomore-level course in CMU. I’m taking the 18213 (ECE) variant this semester, and this post is my review of this course.</p><h3 id="Pros"><a href="#Pros" class="headerlink" title="Pros"></a>Pros</h3><ul><li><p>Professor Kesden teaches 18213 this semester. He is a great professor and is very helpful. His lectures are interesting.</p></li><li><p>Some labs are very fun. I enjoyed writing malloc functions and implementing ROP attacks. And the provided tools (such as Makefile, automatic testing tool) are very useful and improves programming efficiency.</p></li></ul><h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><ul><li><p>Course content is easy. It’s just “a programmer’s perspective” — most content covered in this course is basic userspace programming. It took me just about 3 days to finish malloc lab, for example, so the course load is low. I would recommend <a href="https://www.amazon.com/Advanced-Programming-UNIX-Environment-3rd/dp/0321637739">this book</a> instead for learning userspace programming.</p></li><li><p>CS:APP is a terrible textbook. It contains lots of weird things like “Virtual Page Number”, a custom “P()” function (as opposed to using sem_wait), “Exception Control Flow” (which places interrupts and signals into the same category XD), “Fork” (encouraging students to abort the program if any syscall returns error), etc. There are much better textbooks than CS:APP.</p></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Introduction to Computer Systems (213) is a famous sophomore-level course in CMU. I’m taking the 18213 (ECE) variant this semester, and t</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
   
   <entry>
     <title>Computer Design</title>
@@ -443,28 +465,6 @@
     
     
     <category term="Google Code Jam" scheme="https://hyabc.github.io/tags/Google-Code-Jam/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>NAT Penetration using FRP</title>
-    <link href="https://hyabc.github.io/frp-tutorial/"/>
-    <id>https://hyabc.github.io/frp-tutorial/</id>
-    <published>2021-04-11T19:18:49.000Z</published>
-    <updated>2021-04-13T09:25:52.269Z</updated>
-    
-    <content type="html"><![CDATA[<p>NAT penetration is useful in many cases. For example, if your ISP uses Carrier Grade NAT (CGNAT) and does not have a public IP address, you will need it to expose local service to be accessible from the public Internet. <a href="https://github.com/fatedier/frp%22">FRP</a> is one powerful and simple to use NAT penetration tool. <a href="https://github.com/fatedier/frp/blob/master/README.md">FRP documentation</a> has more information on using FRP.</p><p>To use frp, first download frp server and client (frps and frpc) binaries, and create a regular user for frps/frpc with useradd on the server and client for security reason.</p><h3 id="Server-configuration"><a href="#Server-configuration" class="headerlink" title="Server configuration"></a>Server configuration</h3><p>FRP server binds a main port for the tunnel traffic, as well as allows clients to map other server ports back to client services. Then, client services can be accessed using server ip and the reqested port.</p><p>Server can specify a simple token or password to authenicate client. FRP also supports using OpenID for authenication.</p><p>The server also needs to open the TCP or UDP (if KCP is used) port in the firewall to allow incoming traffic.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">bind_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="attr">kcp_bind_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="attr">allow_ports</span> = &lt;allowed mapping port region&gt;</span><br><span class="line"><span class="attr">authentication_method</span> = token</span><br><span class="line"><span class="attr">token</span> = &lt;token&gt;</span><br></pre></td></tr></table></figure><p>Also, you can create a systemd service to control the frps process. Client can configure systemd service in a similar way.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[Unit]</span></span><br><span class="line"><span class="attr">Description</span>=&lt;your description&gt;</span><br><span class="line"><span class="attr">After</span>=network.target</span><br><span class="line"></span><br><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Type</span>=simple</span><br><span class="line"><span class="attr">User</span>=frps</span><br><span class="line"><span class="attr">Group</span>=frps</span><br><span class="line"><span class="attr">Restart</span>=<span class="literal">on</span>-failure</span><br><span class="line"><span class="attr">RestartSec</span>=<span class="number">5</span>s</span><br><span class="line"><span class="attr">ExecStart</span>=/usr/bin/frps -c /etc/frp/frps.ini</span><br><span class="line"></span><br><span class="line"><span class="section">[Install]</span></span><br><span class="line"><span class="attr">WantedBy</span>=multi-user.target</span><br></pre></td></tr></table></figure><h3 id="Client-configuration"><a href="#Client-configuration" class="headerlink" title="Client configuration"></a>Client configuration</h3><p>Client connects to server port and requests to map local service to one server port. You can optionally use KCP instead of usual TCP as transport protocol for tunnel traffic, because KCP is a UDP-based protocol and it can reduce service latency. </p><p>One client configuration file can contain multiple services and request one server port for each service. Also optionally enable or disable compression and encryption for each service.</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">[common]</span></span><br><span class="line"><span class="attr">server_addr</span> = &lt;server address&gt;</span><br><span class="line"><span class="attr">server_port</span> = &lt;main port&gt;</span><br><span class="line"><span class="comment"># protocol = kcp</span></span><br><span class="line"><span class="attr">authentication_method</span> = token</span><br><span class="line"><span class="attr">token</span> = &lt;token&gt;</span><br><span class="line"></span><br><span class="line"><span class="section">[&lt;service name&gt;]</span></span><br><span class="line"><span class="attr">type</span> = tcp/udp</span><br><span class="line"><span class="attr">local_ip</span> = localhost</span><br><span class="line"><span class="attr">local_port</span> = &lt;local service port&gt;</span><br><span class="line"><span class="attr">remote_port</span> = &lt;requested server port&gt;</span><br><span class="line"><span class="comment"># use_encryption = true</span></span><br><span class="line"><span class="comment"># use_compression = true</span></span><br></pre></td></tr></table></figure><p>Finally, enable and start both frps and frpc with systemd, and your local service should be accessible from the Internet!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;NAT penetration is useful in many cases. For example, if your ISP uses Carrier Grade NAT (CGNAT) and does not have a public IP address, y</summary>
-      
-    
-    
-    
-    
-    <category term="FRP" scheme="https://hyabc.github.io/tags/FRP/"/>
     
   </entry>
   
