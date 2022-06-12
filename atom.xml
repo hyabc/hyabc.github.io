@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-05-05T02:11:23.929Z</updated>
+  <updated>2022-06-12T15:43:33.331Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>NVIDIA Omniverse Ramen Shop</title>
+    <link href="https://hyabc.github.io/nvidia-ramen-shop/"/>
+    <id>https://hyabc.github.io/nvidia-ramen-shop/</id>
+    <published>2022-06-12T15:15:47.000Z</published>
+    <updated>2022-06-12T15:43:33.331Z</updated>
+    
+    <content type="html"><![CDATA[<p>NVIDIA created a ramen shop using the NVIDIA omniverse platform. Here is a video of the ramen shop (<a href="https://blogs.nvidia.com/blog/2022/04/25/making-of-omniverse-ramen-shop/">original blog post</a>):</p><iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/gQkrt5pSj68" title="YouTube video player" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><p>This video is absolutely mind-blowing for me. Using NVIDIA’s graphics technology, human beings are able to replicate the real world in digital systems with an amazing amount of details. This capability is fueled by the growth of the gaming industry towards a more realistic and exciting gaming experience. </p><p>The “omniverse” capability would help many industries digitalize. They can use omniverse to create more advanced and complex models (compared to traditional CAD models) and do more simulations before making a physical prototype, which will transform the development process and help companies innovate faster. This is a step closer to a fully digitalized world.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;NVIDIA created a ramen shop using the NVIDIA omniverse platform. Here is a video of the ramen shop (&lt;a href=&quot;https://blogs.nvidia.com/blo</summary>
+      
+    
+    
+    
+    
+    <category term="NVIDIA" scheme="https://hyabc.github.io/tags/NVIDIA/"/>
+    
+  </entry>
   
   <entry>
     <title>213 Reflection</title>
@@ -443,28 +465,6 @@
     
     
     <category term="Graph" scheme="https://hyabc.github.io/tags/Graph/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Google Code Jam 2021 Round 1a Solution</title>
-    <link href="https://hyabc.github.io/gcj-2021-1a/"/>
-    <id>https://hyabc.github.io/gcj-2021-1a/</id>
-    <published>2021-04-13T20:45:50.000Z</published>
-    <updated>2021-04-14T11:29:22.103Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Append-Sort"><a href="#Append-Sort" class="headerlink" title="Append Sort"></a>Append Sort</h3><h4 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h4><p>Given n-length array, $n \leq 100$, each number is in $1 \leq X_i \leq 10^9$, make this array strictly-increasing by appending digit to any number. Return minimum number of digit needed.</p><h4 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h4><p>Greedy, if $X_i \geq X_{i + 1}$, try to make $len(X_{i + 1})$ equal to $len(X_i)$ or $len(X_i)+1$ by comparing their prefix.</p><hr><h3 id="Prime-Time"><a href="#Prime-Time" class="headerlink" title="Prime Time"></a>Prime Time</h3><h4 id="Problem-1"><a href="#Problem-1" class="headerlink" title="Problem"></a>Problem</h4><p>Given a set of at most $10^{15}$ primes, each prime within $2 \leq p_i \leq 500$, return maximum value of $\sum_{p_i \not\in S} p_i = \prod_{p_i \in S} p_i$ if there exist valid solution.</p><h4 id="Solution-1"><a href="#Solution-1" class="headerlink" title="Solution"></a>Solution</h4><p>Test set 1-2 (at most 100 total primes): Since $W = \sum_{p_i \not\in S} p_i \leq \sum p_i \leq 50000$, the product of primes is inside 50000, so we can search for set S such that $\sum_{p_i \in S} p_i + \prod_{p_i \in S} p_i = W$. This can be done in a DP-like way.</p><p>Test set 3: W is very large. $\prod_{p_i \in S} p_i \leq \sum p_i \leq 5 \times 10^{17}$, each prime is at least 2, so $|S| \leq 60$, so $\sum_{p_i \in S} p_i \leq 60 \times 500=30000$. Then the valid solution is in $[W - 30000, W]$ because $ans = \prod_{p_i \in S} p_i = W - \sum_{p_i \in S} p_i$. </p><p>And the solution value is products of primes in $[2, 500]$. So try and factorize every number in this region and see if it can be expressed by product of available primes and has valid sum.</p><hr><h3 id="Hacked-Exam"><a href="#Hacked-Exam" class="headerlink" title="Hacked Exam"></a>Hacked Exam</h3><h4 id="Problem-2"><a href="#Problem-2" class="headerlink" title="Problem"></a>Problem</h4><p>There are Q true/false problems, given n people’s solution sequence and number of correct answer, all consistent answer sequence have same probability, return a sequence with maximum expected number of correct answer.</p><h4 id="Solution-2"><a href="#Solution-2" class="headerlink" title="Solution"></a>Solution</h4><p>Test set 1-2 ($n \leq 2, Q \leq 40$): We can use DP to compute number of consistent sequence, and for each bit, compute the number of consistent sequence specifying this bit is true/false. Then we have the expected value of each bit being true/false, and sum because of the linearity of expectation.</p><p>Test set 3 ($n \leq 3, Q \leq 120$): There are limited types of questions: when n = 3, there are 8 types of questions: FFF, FFT, …, TTT. Symmetrically (by flipping the result in the end to make FFT type -&gt; TTF type), there are only 4 types of questions. We can brute-force number of consistent sequences by counting number of T out of all available T/F (or number of questions in such type) in each of four type, times some combinatorics number, this takes $O((Q/4)^4)$. Then do in a similar way as previous case and count number of consistent sequences after specifying T/F for each bit. </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Append-Sort&quot;&gt;&lt;a href=&quot;#Append-Sort&quot; class=&quot;headerlink&quot; title=&quot;Append Sort&quot;&gt;&lt;/a&gt;Append Sort&lt;/h3&gt;&lt;h4 id=&quot;Problem&quot;&gt;&lt;a href=&quot;#Problem&quot; c</summary>
-      
-    
-    
-    
-    
-    <category term="Google Code Jam" scheme="https://hyabc.github.io/tags/Google-Code-Jam/"/>
     
   </entry>
   
