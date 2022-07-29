@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>tyz&#39;s blog</title>
   
-  <subtitle>hyabc</subtitle>
+  <subtitle>tyz&#39;s blog</subtitle>
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
@@ -10,7 +10,7 @@
   <id>https://hyabc.github.io/</id>
   
   <author>
-    <name>Yize Tang (Tom)</name>
+    <name>Tom Tang</name>
     
   </author>
   
