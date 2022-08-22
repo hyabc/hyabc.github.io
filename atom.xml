@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-08-20T14:43:35.646Z</updated>
+  <updated>2022-08-22T15:23:45.859Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Code Jam 2022</title>
+    <link href="https://hyabc.github.io/gcj-2022/"/>
+    <id>https://hyabc.github.io/gcj-2022/</id>
+    <published>2022-08-22T15:23:06.000Z</published>
+    <updated>2022-08-22T15:23:45.859Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h3>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;TODO&quot;&gt;&lt;a href=&quot;#TODO&quot; class=&quot;headerlink&quot; title=&quot;TODO&quot;&gt;&lt;/a&gt;TODO&lt;/h3&gt;</summary>
+      
+    
+    
+    
+    
+    <category term="Google Code Jam" scheme="https://hyabc.github.io/tags/Google-Code-Jam/"/>
+    
+  </entry>
   
   <entry>
     <title>赫炎のインガノック / Sekien no Inganock</title>
@@ -443,28 +465,6 @@
     
     
     <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vertex Cover, Independent Set, Clique, and Matching</title>
-    <link href="https://hyabc.github.io/vc-ind-clique-matching/"/>
-    <id>https://hyabc.github.io/vc-ind-clique-matching/</id>
-    <published>2021-04-23T14:11:36.000Z</published>
-    <updated>2021-04-23T03:09:11.415Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Independent-set-lt-gt-clique"><a href="#Independent-set-lt-gt-clique" class="headerlink" title="Independent set &lt;=&gt; clique"></a>Independent set &lt;=&gt; clique</h3><p>An independent set S of G corresponds to a clique containing the same set of vertices S in G’s complement graph (flipping edges in E and not in E). This is because all vertex pair (i, j) in S is not an edge in G is equivalent to all vertex pair (i, j) in S is an edge in G’s complement graph.</p><hr><h3 id="Vertex-cover-lt-gt-independent-set"><a href="#Vertex-cover-lt-gt-independent-set" class="headerlink" title="Vertex cover &lt;=&gt; independent set"></a>Vertex cover &lt;=&gt; independent set</h3><p>A vertex cover S in graph G corresponds to an independent set $V \setminus S$ in G. If S is a valid vertex cover, any vertex pair (i, j) in  $V \setminus S$ is not an edge in G, so  $V \setminus S$ is independent set. If  $V \setminus S$ is an independent set, for any edge at least one endpoint is in S, so S is a vertex cover. Then MIN-VERTEX-COVER = MAX-INDEPENDENT-SET.</p><hr><h3 id="Vertex-cover-lt-gt-matching-in-bipartite-graph"><a href="#Vertex-cover-lt-gt-matching-in-bipartite-graph" class="headerlink" title="Vertex cover &lt;=&gt; matching (in bipartite graph)"></a>Vertex cover &lt;=&gt; matching (in bipartite graph)</h3><p>In bipartite graph, the size of any matching is less or equal than the size of any vertex cover, and MAX-MATCHING = MIN-VERTEX-COVER.</p><h4 id="a-Any-matching-lt-any-vertex-cover"><a href="#a-Any-matching-lt-any-vertex-cover" class="headerlink" title="(a) Any matching &lt;= any vertex cover"></a>(a) Any matching &lt;= any vertex cover</h4><p>Given a matching in a bipartite graph, we need to select at least one vertex from every matched edge. Otherwise, there exist matched edge that isn’t covered. So matching &lt;= vertex cover.</p><h4 id="b-MAX-MATCHING-MIN-VERTEX-COVER"><a href="#b-MAX-MATCHING-MIN-VERTEX-COVER" class="headerlink" title="(b) MAX-MATCHING = MIN-VERTEX-COVER"></a>(b) MAX-MATCHING = MIN-VERTEX-COVER</h4><p>From a maximum matching M, we can construct a vertex cover by (1) direct all matched edge from Y to X and all unmatched edge from X to Y, (2) run a DFS from all unmatched vertices in X, and (3) construct set R by all unvisited vertices in X and all visited vertices in Y.</p><p>The only type of edge that has both endpoints not in R consists of a visited vertex u in X and a unvisited vertex v in Y. If {u, v} is a unmatched edge, then v should be reachable by appending (u, v) to the path to u. If {u, v} is a matched edge, then the only incoming edge towards u  is (v, u). Then u cannot be reachable if v is unreachable. Both cases lead to contradiction. So all edge contains some endpoint in R and R is a valid vertex cover.</p><p>Unvisited vertices in X corresponds to a matched edge (otherwise they will be initially visited by DFS). Visited vertices in Y corresponds to a matched edge (otherwise we have an augmenting path between two unmatched vertices, but M is a maximum matching). Because unvisited vertices in X are not reachable, these edges can not intersect. So |R| &lt;= |M|. Then there exist some vertex cover whose size is at most |M|, so MIN-VERTEX-COVER &lt;= |M|, and MIN-VERTEX-COVER = MAX-MATCHING.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Independent-set-lt-gt-clique&quot;&gt;&lt;a href=&quot;#Independent-set-lt-gt-clique&quot; class=&quot;headerlink&quot; title=&quot;Independent set &amp;lt;=&amp;gt; clique&quot;&gt;&lt;/</summary>
-      
-    
-    
-    
-    
-    <category term="Graph" scheme="https://hyabc.github.io/tags/Graph/"/>
     
   </entry>
   
