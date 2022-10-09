@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-09-01T22:50:55.251Z</updated>
+  <updated>2022-10-08T22:06:41.630Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Quartus Warnings</title>
+    <link href="https://hyabc.github.io/quartus-warning/"/>
+    <id>https://hyabc.github.io/quartus-warning/</id>
+    <published>2022-10-08T22:04:40.000Z</published>
+    <updated>2022-10-08T22:06:41.630Z</updated>
+    
+    <content type="html"><![CDATA[<p>Real C++ programmers ignore warnings!</p><img src="/images/quartus.png" style="height: 180px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Real C++ programmers ignore warnings!&lt;/p&gt;
+&lt;img src=&quot;/images/quartus.png&quot; style=&quot;height: 180px;&quot;&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="SystemVerilog" scheme="https://hyabc.github.io/tags/SystemVerilog/"/>
+    
+  </entry>
   
   <entry>
     <title>Code Jam 2022</title>
@@ -445,28 +469,6 @@
     
     
     <category term="Javascript" scheme="https://hyabc.github.io/tags/Javascript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Goodbye, Spring 2021</title>
-    <link href="https://hyabc.github.io/goodbye-spring-2021/"/>
-    <id>https://hyabc.github.io/goodbye-spring-2021/</id>
-    <published>2021-05-09T21:58:13.000Z</published>
-    <updated>2021-05-10T08:01:00.391Z</updated>
-    
-    <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=428203074&auto=0&height=66"></iframe><p>Spring 2021 马上就要结束了呢。</p><p>这个学期学到了很多有趣的内容！数学学了R2/R3上的微分（用partial derivative），积分（用Fubini Theorem和换元解决），以及scalar/vector surface integral。写作学了很多有用的知识（例如MLA格式，abstract, acknowledgement, Thesis-driven/IMRAD, novelty moves, 以及其他有趣的技巧）。计算机学了DFA, TM, Cook/Karp reduction, 随机/近似算法，还有对很多高级内容的入门。所以这个学期还是相当亦可赛艇的（笑）</p><p>暑假准备玩一下Go！</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;//music.163.com/outchain/player?type=2&amp;id=4282</summary>
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
     
   </entry>
   
