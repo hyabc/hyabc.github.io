@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-10-08T22:06:41.630Z</updated>
+  <updated>2022-10-11T02:40:30.862Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 11 Review</title>
+    <link href="https://hyabc.github.io/win11/"/>
+    <id>https://hyabc.github.io/win11/</id>
+    <published>2022-10-11T02:25:27.000Z</published>
+    <updated>2022-10-11T02:40:30.862Z</updated>
+    
+    <content type="html"><![CDATA[<p>Recently I upgraded my Windows installation to Windows 11! Overall the UI looks nice to me. </p><p>Some really awful things:</p><ul><li>You need to right click twice to get context menu</li><li>No vertical taskbar</li><li>You cannot show all icons on taskbar</li><li>If you run the Win10-&gt;Win11 updater without admin privilege, it will fail at 74% with a random error code</li><li>More Microsoft ad… I want to use Firefox, not Edge…</li></ul><p>After the update, Windows Terminal is very nice (although PowerShell is still awful… it tries to override curl and wget). Also, there is a notepad with dark mode! </p><img src="/images/win11-notepad/2.png" style="height: 300px;"><p>Actually, the notepad is still there… There’s something called “app execution alias”, which sounds like a Microsoft-style idea (one more redirection layer!)</p><img src="/images/win11-notepad/1.png" style="height: 350px;"><p>and if you turn “notepad.exe” off, the old notepad comes back!</p><img src="/images/win11-notepad/3.png" style="height: 300px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Recently I upgraded my Windows installation to Windows 11! Overall the UI looks nice to me. &lt;/p&gt;
+&lt;p&gt;Some really awful things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;l</summary>
+      
+    
+    
+    
+    
+    <category term="Windows" scheme="https://hyabc.github.io/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Quartus Warnings</title>
@@ -447,28 +472,6 @@
     
     
     <category term="AMD" scheme="https://hyabc.github.io/tags/AMD/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project Ran!</title>
-    <link href="https://hyabc.github.io/project-ran/"/>
-    <id>https://hyabc.github.io/project-ran/</id>
-    <published>2021-05-25T18:33:28.000Z</published>
-    <updated>2021-05-25T09:17:48.478Z</updated>
-    
-    <content type="html"><![CDATA[<p>Project Ran is a javascript project. I’m learning js this summer because my previous web projects (like Project HTIC) rely on jumping to other pages to respond to any user action, which makes user experience not  responsive. </p><p>Javascript has many interesting features. It is not typed (you can assign a variable with a string then an integer, like in Python). Functions can be defined directly into a variable and that variable can be called. Function can be used to create objects using the new operator. And JSON is native here.</p><p><a href="https://github.com/hyabc/ran">Project Ran</a> aims to implement a STG game similar to <a href="https://www16.big.or.jp/~zun/">Touhou Project</a> in javascript. In  <a href="https://en.wikipedia.org/wiki/Imperishable_Night">Touhou Eiyashou ~ Imperishable Night</a> (東方永夜抄 ~ Imperishable Night), Yakumo Ran (八雲藍, blue) is the shikigami of Yakumo Yukari (八雲紫, purple). Ran is used as project name here because <a href="https://thwiki.cc/%E4%B8%9C%E6%96%B9%E6%B1%82%E9%97%BB%E5%8F%B2%E7%BA%AA/%E5%85%AB%E4%BA%91%E8%93%9D">Ran is relatively like a computer</a>.</p><img src="/images/ran.jpg" style="height: 300px;"><p>I think the basic features of a STG game have been implemented, including entrance/game interfaces, bullet drawing and shooting, judge of player and enemy damage, high/low speed change, life/bomb counting, so at least it is runnable. But many things should be improved, including better art, game story, enemy characters, and better animations, like player start or bombing effect in 東方永夜抄. The animations look primitive now. It takes me many time and code to draw simple animation like circle animations at speedchange event. </p><p>The basic object for drawing things is <em>shape</em>. Then a <em>bullet_array</em> helps manage an array of <em>shapes</em> (bullets) shoot by <em>player</em> and <em>enemy</em>. A <em>player</em> or <em>enemy</em> has-a <em>shape</em> to represent themselves and a <em>bullet_array</em> to represent the bullets they shoot. A <em>arena_game</em> maintains currently active enemies, invoke <em>player</em> and <em>enemy</em> to draw and judge bullet damage. A <em>game</em> either has-a <em>arena_game</em> or a <em>arena_text</em> (which displays text on screen) depending on the story. </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Project Ran is a javascript project. I’m learning js this summer because my previous web projects (like Project HTIC) rely on jumping to </summary>
-      
-    
-    
-    
-    
-    <category term="Javascript" scheme="https://hyabc.github.io/tags/Javascript/"/>
     
   </entry>
   
