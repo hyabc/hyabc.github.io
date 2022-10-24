@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-10-11T02:40:30.862Z</updated>
+  <updated>2022-10-24T19:47:45.560Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CMU Course List</title>
+    <link href="https://hyabc.github.io/cmu-course-list/"/>
+    <id>https://hyabc.github.io/cmu-course-list/</id>
+    <published>2022-10-24T19:46:24.000Z</published>
+    <updated>2022-10-24T19:47:45.560Z</updated>
+    
+    <content type="html"><![CDATA[<p><a href="https://cmucourselist.org/">CMU Course List</a> (Project Candela) is released (including next semester courses)! Welcome to post comments/tags/pages to courses!</p><img src="/images/projcd/1.png" style="height: 200px;"><img src="/images/projcd/2.png" style="height: 200px;"><img src="/images/projcd/3.png" style="height: 200px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://cmucourselist.org/&quot;&gt;CMU Course List&lt;/a&gt; (Project Candela) is released (including next semester courses)! Welcome to post</summary>
+      
+    
+    
+    
+    
+    <category term="Go" scheme="https://hyabc.github.io/tags/Go/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows 11 Review</title>
@@ -447,31 +469,6 @@
     
     
     <category term="Gtk+" scheme="https://hyabc.github.io/tags/Gtk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AMD Yes!</title>
-    <link href="https://hyabc.github.io/amd-yes/"/>
-    <id>https://hyabc.github.io/amd-yes/</id>
-    <published>2021-05-31T15:22:47.000Z</published>
-    <updated>2021-06-04T02:56:09.989Z</updated>
-    
-    <content type="html"><![CDATA[<p>AMD YES!</p><img src="/images/amd.jpg" style="height: 150px;"><p>Linux installs without any problem. The only issue is battery drain when poweroff (which is strange), and downgrading BIOS to version 1.29 solves this.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;AMD YES!&lt;/p&gt;
-&lt;img src=&quot;/images/amd.jpg&quot; style=&quot;height: 150px;&quot;&gt;
-
-&lt;p&gt;Linux installs without any problem. The only issue is battery drain w</summary>
-      
-    
-    
-    
-    
-    <category term="AMD" scheme="https://hyabc.github.io/tags/AMD/"/>
     
   </entry>
   
