@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-10-24T19:47:45.560Z</updated>
+  <updated>2022-11-02T17:11:45.649Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PulseAudio Issue</title>
+    <link href="https://hyabc.github.io/pulseaudio-issue/"/>
+    <id>https://hyabc.github.io/pulseaudio-issue/</id>
+    <published>2022-11-02T17:05:15.000Z</published>
+    <updated>2022-11-02T17:11:45.649Z</updated>
+    
+    <content type="html"><![CDATA[<p>Recently I upgraded to Linux kernel 5.19 (using Debian backports) and updated UEFI firmware. First, there is a kernel error message about unstable tsc clocksource issue, and I added <code>tsc=nowatchdog</code> to kernel parameter (also I added <code>iommu=pt</code>). (This is a bug in Lenovo’s firmware.) However, the audio output from 3.5mm audio jack contains some noise. It is solved after I changed</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load-module module-udev-detect</span><br></pre></td></tr></table></figure><p>to </p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">load-module module-udev-detect tsched=0</span><br></pre></td></tr></table></figure><p>in <code>/etc/pulse/default.pa</code>, but I still don’t know why it works.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Recently I upgraded to Linux kernel 5.19 (using Debian backports) and updated UEFI firmware. First, there is a kernel error message about</summary>
+      
+    
+    
+    
+    
+    <category term="PulseAudio" scheme="https://hyabc.github.io/tags/PulseAudio/"/>
+    
+  </entry>
   
   <entry>
     <title>CMU Course List</title>
@@ -441,28 +463,6 @@
       
       
     <summary type="html">&lt;h3 id=&quot;Background&quot;&gt;&lt;a href=&quot;#Background&quot; class=&quot;headerlink&quot; title=&quot;Background&quot;&gt;&lt;/a&gt;Background&lt;/h3&gt;&lt;p&gt;In recent days I was debugging some st</summary>
-      
-    
-    
-    
-    
-    <category term="Gtk+" scheme="https://hyabc.github.io/tags/Gtk/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project Railway!</title>
-    <link href="https://hyabc.github.io/project-railway/"/>
-    <id>https://hyabc.github.io/project-railway/</id>
-    <published>2021-06-18T15:29:55.000Z</published>
-    <updated>2021-06-21T13:35:38.750Z</updated>
-    
-    <content type="html"><![CDATA[<p>Background: I was using Rhythmbox to listen to music in GNOME desktop environment. Rhythmbox is an awesome and powerful music player. But several days ago, I think maybe browsing albums in the form of album cover picture grid will look better than browsing albums in album name list, so I start this project.</p><p><a href="https://github.com/hyabc/railway">Project Railway</a> is a Gtk+ music player. It consists of the following parts:</p><ul><li>railway: GUI part. Controls all widgets. Also, calls the ffmpeg program to generate album cover picture for each album asynchronously with GTask, to not block GUI with time-consuming operation.</li><li>railwaylibrary: Reads music library and generates arrays of song and album information. And uses GStreamer GstDiscoverer to retrieve song metadata, or “tags”, to sort music in track order.</li><li>railwaymusic: The actual music player part. Calls GStreamer GstPlayer to do all the work.</li><li>railwayplaylist: Manages the playlist by cloning a copy of song array.</li></ul><p>The resulting music player looks like:</p><img src="/images/railway.jpg"/><p>UPD: Support searching by album name or artist name now!</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;Background: I was using Rhythmbox to listen to music in GNOME desktop environment. Rhythmbox is an awesome and powerful music player. But</summary>
       
     
     
