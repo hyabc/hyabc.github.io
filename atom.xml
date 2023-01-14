@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-01-14T04:01:23.858Z</updated>
+  <updated>2023-01-14T04:06:38.845Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -21,16 +21,14 @@
     <link href="https://hyabc.github.io/hello-modules-cpp20/"/>
     <id>https://hyabc.github.io/hello-modules-cpp20/</id>
     <published>2023-01-14T03:47:19.000Z</published>
-    <updated>2023-01-14T04:01:23.858Z</updated>
+    <updated>2023-01-14T04:06:38.845Z</updated>
     
-    <content type="html"><![CDATA[<img src="/images/cpp20-modules.png" style="max-height: 200px;"><p>Modules is a very exciting part of C++20. Similar to Go modules, C++20 modules can save the compiler from repeatedly scanning header files. This will make C++ code build faster and become more modular (independent of #include order). And the hello-world program becomes easier to write XD</p><p>This program is compiled using cl.exe 19.33 (MSVC v143, Visual Studio 2022). Gcc and Clang still don’t support importing standard library yet, and MSVC support is still experimental. But the future of C++ looks great!</p>]]></content>
+    <content type="html"><![CDATA[<p>Module is a very exciting part of C++20. Similar to Go modules, C++20 modules can save the compiler from repeatedly scanning header files. This will make C++ code build faster and become more modular (independent of #include order). And the Hello World program becomes easier to write XD</p><p>This program is compiled using cl.exe 19.33 (MSVC v143, Visual Studio 2022). Gcc and Clang still don’t support importing standard library yet, and MSVC support is still experimental. But the future of C++ looks great!</p><img src="/images/cpp20-modules.png" style="max-height: 200px;">]]></content>
     
     
       
       
-    <summary type="html">&lt;img src=&quot;/images/cpp20-modules.png&quot; style=&quot;max-height: 200px;&quot;&gt;
-
-&lt;p&gt;Modules is a very exciting part of C++20. Similar to Go modules, C++20 </summary>
+    <summary type="html">&lt;p&gt;Module is a very exciting part of C++20. Similar to Go modules, C++20 modules can save the compiler from repeatedly scanning header files</summary>
       
     
     
