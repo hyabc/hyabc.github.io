@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2022-12-26T01:04:46.453Z</updated>
+  <updated>2023-01-14T04:01:23.858Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello, modules!</title>
+    <link href="https://hyabc.github.io/hello-modules-cpp20/"/>
+    <id>https://hyabc.github.io/hello-modules-cpp20/</id>
+    <published>2023-01-14T03:47:19.000Z</published>
+    <updated>2023-01-14T04:01:23.858Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/images/cpp20-modules.png" style="max-height: 200px;"><p>Modules is a very exciting part of C++20. Similar to Go modules, C++20 modules can save the compiler from repeatedly scanning header files. This will make C++ code build faster and become more modular (independent of #include order). And the hello-world program becomes easier to write XD</p><p>This program is compiled using cl.exe 19.33 (MSVC v143, Visual Studio 2022). Gcc and Clang still don’t support importing standard library yet, and MSVC support is still experimental. But the future of C++ looks great!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/images/cpp20-modules.png&quot; style=&quot;max-height: 200px;&quot;&gt;
+
+&lt;p&gt;Modules is a very exciting part of C++20. Similar to Go modules, C++20 </summary>
+      
+    
+    
+    
+    
+    <category term="C++" scheme="https://hyabc.github.io/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>Christmas 2022</title>
@@ -449,28 +473,6 @@
     
     
     <category term="Game" scheme="https://hyabc.github.io/tags/Game/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project Radiation</title>
-    <link href="https://hyabc.github.io/project-radiation/"/>
-    <id>https://hyabc.github.io/project-radiation/</id>
-    <published>2021-07-20T18:12:08.000Z</published>
-    <updated>2021-07-27T08:12:44.923Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h3><p>I like using <a href="https://miniflux.app/">Miniflux</a> to read RSS feeds! Miniflux has a very nice web UI to read articles and manage feeds/categories. But sometimes I’m too lazy to open a browser to read news. So I decided to write a simple CLI client using Miniflux API.</p><h3 id="Project-Radiation"><a href="#Project-Radiation" class="headerlink" title="Project Radiation"></a>Project Radiation</h3><p>With Project Radiation, you can read news articles directly in your terminal! The program uses a command prompt to select between listing entry list, displaying article content, and switching to next/previous pages. And paging is supported both on entry list and article content. The default action (empty command) is to display the first available article and its consecutive pages, so that normally the only thing users needs to do is press Enter repeatedly. You can see the command prompt being “&gt; “ in normal mode and “(id) &gt;” in article paging mode (activated when an article has more than one page).</p><h3 id="External-Program"><a href="#External-Program" class="headerlink" title="External Program"></a>External Program</h3><p><a href="https://lynx.browser.org/">Lynx</a> is used to convert article content formatted in HTML into text strings to display in terminal, and it is called using the <code>exec</code> package.</p><h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>This is my first project using Go and programming in Go is fun! Returning <code>error</code> is more intuitive than the exception system in C++/Java and helps me write better error handling code, there are many useful packages built-in such as <code>net/http</code> and JSON encoding which is easy to use, calling external program and redirecting its stdin/stdout is easier than manually fork-exec-pipe-dup2 in C, and I implemented most features in Project Radiation faster than I expected.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;Background&quot;&gt;&lt;a href=&quot;#Background&quot; class=&quot;headerlink&quot; title=&quot;Background&quot;&gt;&lt;/a&gt;Background&lt;/h3&gt;&lt;p&gt;I like using &lt;a href=&quot;https://miniflux</summary>
-      
-    
-    
-    
-    
-    <category term="Go" scheme="https://hyabc.github.io/tags/Go/"/>
     
   </entry>
   
