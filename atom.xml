@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-01-15T02:13:14.856Z</updated>
+  <updated>2023-01-15T22:10:58.805Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>TNP: Introduction</title>
+    <link href="https://hyabc.github.io/tnp-intro/"/>
+    <id>https://hyabc.github.io/tnp-intro/</id>
+    <published>2023-01-15T21:34:42.000Z</published>
+    <updated>2023-01-15T22:10:58.805Z</updated>
+    
+    <content type="html"><![CDATA[<p>TNP (Tensor Native Processor) is a experimental processor design to run AI computation in a very efficient way. Primarily, TNP relies on systolic array to accelerate matrix operations (Google’s <a href="https://cloud.google.com/blog/products/ai-machine-learning/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu">TPU</a> also uses systolic arrays). However, we want to maximize systolic array performance, we make everything in the project design “tensor native”:</p><ul><li>2-diagonal cacher read&#x2F;write - Keep the systolic array busy.</li><li>Matrix-shaped registers - Each matrix register has the same size as the systolic array. Now we can read&#x2F;write rows, columns and diagonals for each matrix register.</li><li>Local memory for each core (NUMA) - Maximize memory bandwidth, and avoid shared, last level cache.</li><li>Vector-add ALU inside matrix core - Adding two vectors turns out to be a very common case during matrix multiplication, so we include it in the same core.</li></ul><p>And we want the compiler to have maximum control of underlying hardware, since the compiler is aware of the global computation structure:</p><ul><li>Software managed cache (instead of LRU) - More intelligent register resource allocation.</li><li>Message-passing interface between cores - Let compilers explicitly indicate inter-core communication.</li><li>Deterministic execution time - This helps us predict the execution time for any partial code. This enables a feedback loop for code generation&#x2F;execution time evaluation right in compilation time.</li></ul><p>We implemented the hardware part (matrix cores, vector cores, switch) in SystemVerilog and the software part (assembler, compiler, ONNX interface) in C++.</p><p>This project is initially a <a href="https://www.cs.cmu.edu/~15418/">15418&#x2F;15618</a> course project (project <a href="files/tnp-poster.pdf">poster</a>).</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;TNP (Tensor Native Processor) is a experimental processor design to run AI computation in a very efficient way. Primarily, TNP relies on </summary>
+      
+    
+    
+    
+    
+    <category term="TNP" scheme="https://hyabc.github.io/tags/TNP/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello, modules!</title>
@@ -446,31 +468,6 @@
     
     
     <category term="MOSFET" scheme="https://hyabc.github.io/tags/MOSFET/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>White Album 2</title>
-    <link href="https://hyabc.github.io/white-album-2/"/>
-    <id>https://hyabc.github.io/white-album-2/</id>
-    <published>2021-08-03T21:55:34.000Z</published>
-    <updated>2021-08-09T08:07:34.676Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>白色相簿什么的已经无所谓了。<br>因为已经不再有歌，值得去唱了。<br>传达不了的恋情已经不需要了。<br>因为已经不再有人，值得去爱了。<br>&nbsp;  &mdash; 白色相簿2 CC篇 </p></blockquote><p>最近玩了一下<a href="https://en.wikipedia.org/wiki/White_Album_2">白色相簿2</a>。首先感觉是超级胃疼啊啊啊！！！这是第一部使我玩的这么难受的Galgame… TAT</p><p>白色相簿2中令人痛苦的场景有太多了…雪菜生日时冬马对春希远离自己的场景（”为什么你会这么熟练啊？你和雪菜，到底接吻了多少次啊！”虽然有点想笑～），在机场送别冬马时雪菜看着春希跑过去和冬马接吻的场景（”世界名画”），雪菜在宾馆里看着春希看冬马杂志的场景，三女线中春希一边背叛着雪菜一边给雪菜发短信的场景（实在太恐怖了！！！真的好想吐啊！），三女线末尾部分春希向雪菜分手并雪菜告别的场景（一首Answer送给雪菜QuQ），还有雪菜两次生日时二选一令另一个人独自等待的场景…相当的情感上受打击呢&gt;_&lt;</p><p>更加糟糕的是，我觉得白2中没有彻底的坏人。春希是一个认真并且热心帮助他人的人，也会尽量不让任何人受伤。（虽然在崩溃的状态下可能做出非常奇怪的事情：”给千晶打电话？去编辑部露面？那种事，怎么能去考虑？”）（但是春希确实过于擅长说谎了）不让任何人受伤的原则却使他进入了一个非常糟糕的局面。所以，为什么会变成这样呢？？？</p><figure><img src="/images/wa2.jpg"/><figcaption>喵喵喵？？？怎么办怎么办？？？</figcaption></figure><p>白色相簿2中我最喜欢的音乐是”雪菜处刑曲”（就是春希向雪菜提出分手时播放的BGM） <a href="https://m.youtube.com/watch?v=h48OhvXCv1o">Answer</a>！ 好像是雪菜和春希CV一起唱的（手动滑稽）（这样感觉超级对不起雪菜啊～～～）同时<a href="https://www.youtube.com/watch?v=PkJ8yZ7rAzY">Honesty</a>, <a href="https://www.youtube.com/watch?v=nScmTvAZlIk">Twinkle Snow</a>, <a href="https://www.bilibili.com/video/BV1FE411q7et">无法传递的爱恋</a> 我也觉得相当好听！</p><p>总之，尽管故事相当致郁，白色相簿2确实是一部相当值得尝试的作品！（Warning：同时是脱宅神作！我现在完全没有勇气再去玩新的Galgame了…）所以说，感觉恋爱好残酷啊！！！本该是雪菜冬马春希千晶小春麻理所有人都是可以成为朋友的…但是，为什么，会变成这样呢……</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;白色相簿什么的已经无所谓了。&lt;br&gt;因为已经不再有歌，值得去唱了。&lt;br&gt;传达不了的恋情已经不需要了。&lt;br&gt;因为已经不再有人，值得去爱了。&lt;br&gt;&amp;nbsp;  &amp;mdash; 白色相簿2 CC篇 &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;最近</summary>
-      
-    
-    
-    
-    
-    <category term="Game" scheme="https://hyabc.github.io/tags/Game/"/>
     
   </entry>
   
