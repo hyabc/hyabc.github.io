@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-01-29T19:12:14.135Z</updated>
+  <updated>2023-03-27T01:40:43.356Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Functional Programming is Terrible</title>
+    <link href="https://hyabc.github.io/functional-programming/"/>
+    <id>https://hyabc.github.io/functional-programming/</id>
+    <published>2023-03-27T00:40:45.000Z</published>
+    <updated>2023-03-27T01:40:43.356Z</updated>
+    
+    <content type="html"><![CDATA[<p>Functional programming is somewhat popular at CMU. There is even a <a href="https://www.cs.cmu.edu/~15150/">course</a> about it. However, functional programming is the worst programming paradigm. For the marketing points of the course,</p><ul><li>FP isn’t better for program verification: Verification is almost trivial without mutable states, in almost all programming languages. Analyzing control flow, etc. isn’t hard as long as the syntax is well-defined. States are the challenge to automatic verification, and functional programming is supposed to be immutable and have no state. But you can’t avoid states in real life. States are what makes software useful. If you write a program without mutable states, it is essentially one huge expression and just some adapter code. You can’t even implement dynamic programming without some kind of states for memorization. </li><li>FP makes parallelism harder: It is true that making more things immutable can reduce the possibility for race conditions. But all common languages have <code>const</code> or <code>final</code> that control it better. And other languages have better parallelism ecosystem. C++ has CUDA&#x2F;SIMD instrinstics, Go has goroutines, Java has Hadoop, and there are many others. </li><li>Abstraction: It’s way easier to implement proper abstraction with OOP languages. OOP is mostly just about abstraction&#x2F;encapsulation, and it does really well at that. OCaml has better abstraction by learning from OOP, but the syntax is still somewhat counterintuitive.</li></ul><p>And most FP languages use terrible language constructs,</p><ul><li>ADT: Abstract data types is a very inefficient way to represent data. ADT is often used recursively (if not, it is as harmless as <code>std::variant</code>). And it can be huge: there are often programs that store trees in ADT. The data have to be allocated on heap (compilers can’t know the size in advance) and all nodes are tagged (to store the variant). Now some seemingly innocuous data structures can be very inefficient. </li><li>Pattern matching: Pattern matching has to be sequential because of the pattern matching priority from top to bottom, which makes it no more useful than a long list of if&#x2F;else. And unfortunately you can’t avoid pattern matching because of ADT.</li><li>FP significantly decreases code readability and maintainability: Lack of common features like loops, you have to use lambda functions instead. This is much more difficult to read than something like range-based for in most languages. You have to write a function to print 5 “Hello, world!” and good luck on your stack usage. And it  becomes worse with high order function, it just wastes programmer effort to understand the code and the control flow. Most languages actually have a human-readable control flow, as early as Fortran! Don’t overuse lambda functions, in any language. </li><li>Code reuse: There is essentially no polymorphism in FP languages. The type system is at most something like C++20 concepts and broken generics, that’s NOT polymorphism. </li><li>FP makes complexity analysis harder: Do you want to analyze the time complexity of a huge mess of lambdas, function arguments, closures and expressions?</li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Functional programming is somewhat popular at CMU. There is even a &lt;a href=&quot;https://www.cs.cmu.edu/~15150/&quot;&gt;course&lt;/a&gt; about it. However,</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
   
   <entry>
     <title>Very Slow Computer</title>
@@ -443,29 +465,6 @@
     
     
     <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>RLC Circuit Review</title>
-    <link href="https://hyabc.github.io/rlc-review/"/>
-    <id>https://hyabc.github.io/rlc-review/</id>
-    <published>2021-10-03T01:52:42.000Z</published>
-    <updated>2021-10-05T02:24:04.113Z</updated>
-    
-    <content type="html"><![CDATA[<p>tyz is going to have a 18220 midterm next week so he is going to review some simple RLC circuits!</p><h3 id="RC"><a href="#RC" class="headerlink" title="RC"></a>RC</h3><p>Imagine there is a resistor and a capacitor connected in serial. Let $I_C$ be the current passing through the capacitor, $V_C$ be the voltage across the capacitor. Then the voltage across the resistor is $-V_C$. Assume the initial voltage across the capacitor is $V_0$.</p><p>Since $I_C = C{ {d V_C} \over {d t} }$, we have $R C{ {d V_C} \over {d t} } + V_C = 0$, and ${ {d V_C} \over {d t} } + {1 \over {RC} } V_C = 0$. Solving this equation we have $V_C = A e^{- {t \over {RC} } }$. Applying the initial value, we have $V_C = V_0 e^{- {t \over {RC} } }$. Let time constant $\tau = RC$, $V_C = V_0 e^{- {t \over \tau} }$</p><h3 id="RC-with-voltage-source"><a href="#RC-with-voltage-source" class="headerlink" title="RC with voltage source"></a>RC with voltage source</h3><p>There is a resistor and a capacitor, and also a voltage source $V_0$ in serial. This time we assume initial voltage across the capacitor is 0V. As capacitor eventually become open circuit, we know the voltage across capacitor eventually becom $V_0$.</p><p>Since $I_C = C{ {d V_C} \over {d t} }$, we have $R C{ {d V_C} \over {d t} } + V_C = V_0$, or ${ {d V_C} \over {d t} } + { {V_C} \over {RC} } = { {V_0} \over {RC} }$. Solving this differential equation, we have $V_C = A e^{- {t \over {RC} } } + V0$. Applying initial value we have $V_C = A (1 - e^{- {t \over \tau} })$.</p><h3 id="RL"><a href="#RL" class="headerlink" title="RL"></a>RL</h3><p>Imagine there is a resisor and an inductor connected in serial. Let $I_L$ be the current passing through the inductor (and also the resistor), $V_L$ be the voltage across the inductor. Assume initial current passing the inductor is $I_0$.</p><p>Since $V_L = L { {d I_L} \over {dt} }$, we have $L { {d I_L} \over {dt} } + R I_L = 0$, or ${ {d I_L} \over {dt} } + {R \over L} I_L = 0$. Solving this we got $I_L = A e^{- {R \over L} t }$. Let $\tau = {L \over R}$ and applying initial value, we have $I_L = I_0 e^{- {t \over \tau} }$.</p><h3 id="RL-with-voltage-source"><a href="#RL-with-voltage-source" class="headerlink" title="RL with voltage source"></a>RL with voltage source</h3><p>Now we have a voltage source $V_0$ in addition! As inductor eventually become short circuit, we know the current through the inductor eventually become $I_0$. Assume initial current through the inductor is 0A.</p><p>Since $V_L = L { {d I_L} \over {dt} }$, we have $L { {d I_L} \over {dt} } + R I_L = V_0$, ${ {d I_L} \over {dt} } + {R \over L} I_L = {V_0 \over L}$. So we have $I_L = {V_0 \over R} + A e^{- {t \over \tau} }$. Applying the initial value we have $I_L = {V_0 \over R} (1 -  e^{- {t \over \tau} })$.</p><h3 id="LC"><a href="#LC" class="headerlink" title="LC"></a>LC</h3><p>Imagine there is a inductor and a capacitor in serial, and we want to know the voltage across the capacitor $V_C$. Then voltage across inductor is $-V_C$.</p><p>By $I = C{ {d V_C} \over {dt} }$ and $-V_C = L { {dI} \over {dt} }$, we have $-V_C = LC { {d^2 V_C} \over {dt^2} }$, or ${ {d^2 V_C} \over {dt^2} } + {V_C \over {LC} } = 0$. Let $\omega_0 = \sqrt{1 \over {LC} }$, we have $V_C = C_1 \cos (\omega_0 t) + C_2 \sin (\omega_0 t)$, and $V_C = R \sin (\omega_0 t + \phi)$. </p><h3 id="RLC"><a href="#RLC" class="headerlink" title="RLC"></a>RLC</h3><p>Now suppose we have a resistor, a inductor and a capacitor in parallel! And we also want to know $V_C$. </p><p>Since $-V_C - IR = L { {dI} \over {dt} }$, we have ${ {d^2 V_C} \over {dt^2} } + {R \over L} { {d V_C} \over {dt} } +  {V_C \over {LC} } = 0$. Let $\alpha = {R \over {2L} }$, solving $r^2 + 2\alpha r + (\omega_0)^2 = 0$. Now solution is (assume $\omega_0 &gt; \alpha$), let $\mu = \sqrt{\omega_0 ^ 2 - \alpha ^ 2}$, $V_C = e ^ {-\alpha} (C_1 \cos (\mu t) + C_2 \sin (\mu t) )$, and $V_C  = e ^ {-\alpha} R \sin (\mu t + \phi) $</p><h3 id="Other-circuits"><a href="#Other-circuits" class="headerlink" title="Other circuits"></a>Other circuits</h3><p>For more complex circuits, we can always do nodal analysis! (QAQ)</p><ol><li>Label nodes and their voltages</li><li>Write KCL formulas</li><li>For voltage source, create a new variable of the current flowing through it and add an equation about the voltage difference across it</li><li>For inductor, create a new variable of the current flowing through it and add an equation about the inductor voltage-current relation</li></ol>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;tyz is going to have a 18220 midterm next week so he is going to review some simple RLC circuits!&lt;/p&gt;
-&lt;h3 id=&quot;RC&quot;&gt;&lt;a href=&quot;#RC&quot; class=&quot;he</summary>
-      
-    
-    
-    
-    
-    <category term="RLC" scheme="https://hyabc.github.io/tags/RLC/"/>
     
   </entry>
   
