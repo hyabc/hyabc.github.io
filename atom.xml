@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-03-27T01:40:43.356Z</updated>
+  <updated>2023-03-30T02:41:34.322Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Welcome to ECE!</title>
+    <link href="https://hyabc.github.io/welcome-to-ece/"/>
+    <id>https://hyabc.github.io/welcome-to-ece/</id>
+    <published>2023-03-30T02:39:12.000Z</published>
+    <updated>2023-03-30T02:41:34.322Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/images/fence/ece-1.jpg" style="max-height: 400px;"><img src="/images/fence/ece-2.jpg" style="max-height: 400px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;img src=&quot;/images/fence/ece-1.jpg&quot; style=&quot;max-height: 400px;&quot;&gt;
+
+&lt;img src=&quot;/images/fence/ece-2.jpg&quot; style=&quot;max-height: 400px;&quot;&gt;
+</summary>
+      
+    
+    
+    
+    
+    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
+    
+  </entry>
   
   <entry>
     <title>Functional Programming is Terrible</title>
@@ -436,29 +461,6 @@
       
     <summary type="html">&lt;p&gt;CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!&lt;/p&gt;
 &lt;img src=&quot;/images/demosplash/1.jpg&quot; style=&quot;height</summary>
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Homecoming Week 2021</title>
-    <link href="https://hyabc.github.io/homecoming-2021/"/>
-    <id>https://hyabc.github.io/homecoming-2021/</id>
-    <published>2021-11-06T17:21:28.000Z</published>
-    <updated>2021-11-06T17:23:40.042Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="https://www.cmu.edu/piper/news/archives/2021/november/tartan-community-day.html">Homecoming Week!</a></p><img src="/images/homecoming-2021.jpg" style="height: 400px;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://www.cmu.edu/piper/news/archives/2021/november/tartan-community-day.html&quot;&gt;Homecoming Week!&lt;/a&gt;&lt;/p&gt;
-&lt;img src=&quot;/images/home</summary>
       
     
     
