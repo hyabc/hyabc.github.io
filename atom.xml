@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-03-30T02:41:34.322Z</updated>
+  <updated>2023-07-23T19:10:41.558Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Debian 12 &quot;Bookworm&quot;</title>
+    <link href="https://hyabc.github.io/debian-12/"/>
+    <id>https://hyabc.github.io/debian-12/</id>
+    <published>2023-07-23T18:48:42.000Z</published>
+    <updated>2023-07-23T19:10:41.558Z</updated>
+    
+    <content type="html"><![CDATA[<p>Debian 12 “Bookworm” has been released last month (June 2023)! </p><h3 id="Development"><a href="#Development" class="headerlink" title="Development"></a>Development</h3><p>Debian 12 comes with recent development tools, such as</p><ul><li>GCC 12.2</li><li>Clang 14.0</li><li>Linux 6.1</li><li>Python 3.11</li><li>Vim 9.0</li><li>Java 17.0</li><li>PHP 8.2</li><li>Node 18.13</li></ul><h3 id="Desktop"><a href="#Desktop" class="headerlink" title="Desktop"></a>Desktop</h3><p>GNOME 43.4 is shipped with Debian 12. Compared to the GNOME desktop in Debian 11, it has built-in power management features, a notification area that looks nicer (and resembles the one in Windows 11), and better support for dark theme. One major change is the virtual desktops are horizontally aligned now. </p><h3 id="Upgrade"><a href="#Upgrade" class="headerlink" title="Upgrade"></a>Upgrade</h3><p>My upgrade process is extremely smooth. Just need to change repository and let apt upgrade, and after a reboot the system becomes Debian 12 (&gt;w&lt;). The only noticeable changes are:</p><ul><li>TLP is replaced by GNOME power management utility. Honestly I think TLP is more powerful and provides more control, but GNOME seems to be sufficient for laptops in most cases.</li><li>unattended-upgrades is replaced by GNOME software. I really don’t like GNOME software (it is way less reliable than unattended-upgrades), so I will just run updates manually.</li></ul><p>Overall it’s a nice system upgrade. Debian 12 works as reliable as any Debian releases.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Debian 12 “Bookworm” has been released last month (June 2023)! &lt;/p&gt;
+&lt;h3 id=&quot;Development&quot;&gt;&lt;a href=&quot;#Development&quot; class=&quot;headerlink&quot; title=</summary>
+      
+    
+    
+    
+    
+    <category term="Linux" scheme="https://hyabc.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Welcome to ECE!</title>
@@ -444,29 +467,6 @@
     
     
     <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demosplash 2021!</title>
-    <link href="https://hyabc.github.io/demosplash-2021/"/>
-    <id>https://hyabc.github.io/demosplash-2021/</id>
-    <published>2021-11-13T03:23:18.000Z</published>
-    <updated>2021-11-13T03:26:53.630Z</updated>
-    
-    <content type="html"><![CDATA[<p>CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!</p><img src="/images/demosplash/1.jpg" style="height: 200px;"><img src="/images/demosplash/2.jpg" style="height: 200px;"><img src="/images/demosplash/3.jpg" style="height: 200px;"><img src="/images/demosplash/4.jpg" style="height: 200px;"><img src="/images/demosplash/5.jpg" style="height: 200px;"><img src="/images/demosplash/6.jpg" style="height: 200px;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!&lt;/p&gt;
-&lt;img src=&quot;/images/demosplash/1.jpg&quot; style=&quot;height</summary>
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
     
   </entry>
   

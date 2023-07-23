@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://hyabc.github.io/debian-12/</loc>
+    
+    <lastmod>2023-07-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/quotes/index.html</loc>
     
     <lastmod>2023-04-01</lastmod>
@@ -227,15 +236,6 @@
   </url>
   
   <url>
-    <loc>https://hyabc.github.io/white-album-2/</loc>
-    
-    <lastmod>2021-08-09</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hyabc.github.io/project-radiation/</loc>
     
     <lastmod>2021-07-27</lastmod>
@@ -344,15 +344,6 @@
   </url>
   
   <url>
-    <loc>https://hyabc.github.io/kongyiji-reading/</loc>
-    
-    <lastmod>2021-04-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://hyabc.github.io/hexo-installation/</loc>
     
     <lastmod>2021-03-28</lastmod>
@@ -373,7 +364,7 @@
 
   <url>
     <loc>https://hyabc.github.io/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -381,161 +372,161 @@
   
   <url>
     <loc>https://hyabc.github.io/tags/AMD/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Architecture/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Misc/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/ICPC/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/FRP/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Google-Code-Jam/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Hexo/</loc>
-    <lastmod>2023-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hyabc.github.io/tags/Reading/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/MOSFET/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/OpenGL-ES/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Go/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Gtk/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Javascript/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/RLC/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Proxy/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Graph/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Game/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/NVIDIA/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/SystemVerilog/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/Windows/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/PulseAudio/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/C/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://hyabc.github.io/tags/TNP/</loc>
-    <lastmod>2023-04-01</lastmod>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://hyabc.github.io/tags/Linux/</loc>
+    <lastmod>2023-07-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
