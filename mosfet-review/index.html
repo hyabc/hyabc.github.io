@@ -7,9 +7,9 @@
 <ul>
 <li><p>Cutoff region: When $V_{GS} &lt; V_{TH}$. MOSFET acts like open circuit.</p>
 </li>
-<li><p>Triode region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &lt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} = {k \over 2} [ 2 (V_{GS} - V_{TH}) V_{DS} - V_{DS}^2 ]$. When $V_{DS}$ is very small, this is approximately $I_{D} = k (V_{GS} - V_{TH}) V_{DS}$ and the MOSFET can be regarded as a resistor of resistance $R_{ch} = k (V_{GS} - V_{TH})$.<br>It’s common to use this region in digital circuit because it behaves like a digital switch whose resistance is either 0 or $R_{ch}$.</p>
+<li><p>Triode region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &lt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} &#x3D; {k \over 2} [ 2 (V_{GS} - V_{TH}) V_{DS} - V_{DS}^2 ]$. When $V_{DS}$ is very small, this is approximately $I_{D} &#x3D; k (V_{GS} - V_{TH}) V_{DS}$ and the MOSFET can be regarded as a resistor of resistance $R_{ch} &#x3D; k (V_{GS} - V_{TH})$.<br>It’s common to use this region in digital circuit because it behaves like a digital switch whose resistance is either 0 or $R_{ch}$.</p>
 </li>
-<li><p>Saturation region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &gt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} = {k \over 2} ( V_{GS} - V_{TH} )^2$. The MOSFET can be regarded as a voltage-controlled current source.<br>It’s common to use this region in analog circuit because it provides the largest gain from input $V_{GS}$.</p>
+<li><p>Saturation region: When $V_{GS} &gt; V_{TH}$ and $V_{DS} &gt; V_{GS} - V_{TH}$.<br>In this region, the current flowing from drain to source is $I_{D} &#x3D; {k \over 2} ( V_{GS} - V_{TH} )^2$. The MOSFET can be regarded as a voltage-controlled current source.<br>It’s common to use this region in analog circuit because it provides the largest gain from input $V_{GS}$.</p>
 </li>
 </ul>
 <p>The above are for NMOS. For PMOS, change the sign of $V_{GS}$, $V_{TH}$ and $V_{DS}$ and other things are similar.</p>

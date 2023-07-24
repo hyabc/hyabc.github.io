@@ -230,12 +230,14 @@ function loadInsight(config, translation) {
           return weights.post(b) - weights.post(a);
         })
         .slice(0, 5),
+        /* Disable pages search
       pages: pages
         .filter(filters.page)
         .sort((a, b) => {
           return weights.page(b) - weights.page(a);
         })
         .slice(0, 5),
+        */
       categories: categories
         .filter(filters.category)
         .sort((a, b) => {
