@@ -2,7 +2,6 @@ User-agent: *
 Allow: /
 Allow: /archives/
 Allow: /tags/ 
-Allow: /quotes/
 Allow: /about/
 
 Sitemap: https://hyabc.github.io/sitemap.xml
