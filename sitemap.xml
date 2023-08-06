@@ -362,6 +362,13 @@
 
   
   <url>
+    <loc>https://hyabc.github.io/tags/AMD/</loc>
+    <lastmod>2023-08-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://hyabc.github.io/tags/Misc/</loc>
     <lastmod>2023-08-06</lastmod>
     <changefreq>weekly</changefreq>
@@ -370,13 +377,6 @@
   
   <url>
     <loc>https://hyabc.github.io/tags/Go/</loc>
-    <lastmod>2023-08-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://hyabc.github.io/tags/AMD/</loc>
     <lastmod>2023-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -488,14 +488,14 @@
   </url>
   
   <url>
-    <loc>https://hyabc.github.io/tags/Proxy/</loc>
+    <loc>https://hyabc.github.io/tags/TNP/</loc>
     <lastmod>2023-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://hyabc.github.io/tags/TNP/</loc>
+    <loc>https://hyabc.github.io/tags/Proxy/</loc>
     <lastmod>2023-08-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
