@@ -1,5 +1,6 @@
 .rowqwq {
   display: table;
+  width: 100%;
 }
 .colqwq {
   float: left;

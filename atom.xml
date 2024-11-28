@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2023-07-23T19:10:41.558Z</updated>
+  <updated>2024-11-28T01:02:35.942Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Systolic Blood Pressure</title>
+    <link href="https://hyabc.github.io/sbp/"/>
+    <id>https://hyabc.github.io/sbp/</id>
+    <published>2024-11-28T00:53:42.000Z</published>
+    <updated>2024-11-28T01:02:35.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>At the end of this semester (<a href="https://courses.ece.cmu.edu/18726">18726</a>), we finally got our PCB&#x2F;die shot back!</p><img src="/images/sbp/die-shot.jpg" style="max-height: 400px;"><p>Master <a href="https://chensy7.github.io/">Siyuan</a>, may the force be with you.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;At the end of this semester (&lt;a href=&quot;https://courses.ece.cmu.edu/18726&quot;&gt;18726&lt;/a&gt;), we finally got our PCB&amp;#x2F;die shot back!&lt;/p&gt;
+&lt;img </summary>
+      
+    
+    
+    
+    
+    <category term="Chip" scheme="https://hyabc.github.io/tags/Chip/"/>
+    
+  </entry>
   
   <entry>
     <title>Debian 12 &quot;Bookworm&quot;</title>
@@ -445,29 +468,6 @@
     
     
     <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Demosplash 2021!</title>
-    <link href="https://hyabc.github.io/demosplash-2021/"/>
-    <id>https://hyabc.github.io/demosplash-2021/</id>
-    <published>2021-11-13T03:23:18.000Z</published>
-    <updated>2021-11-13T03:26:53.630Z</updated>
-    
-    <content type="html"><![CDATA[<p>CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!</p><img src="/images/demosplash/1.jpg" style="height: 200px;"><img src="/images/demosplash/2.jpg" style="height: 200px;"><img src="/images/demosplash/3.jpg" style="height: 200px;"><img src="/images/demosplash/4.jpg" style="height: 200px;"><img src="/images/demosplash/5.jpg" style="height: 200px;"><img src="/images/demosplash/6.jpg" style="height: 200px;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;CMU Computer Club is hosting Demosplash 2021! There are a lot of exciting machines!&lt;/p&gt;
-&lt;img src=&quot;/images/demosplash/1.jpg&quot; style=&quot;height</summary>
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
     
   </entry>
   
