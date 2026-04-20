@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2024-11-28T01:02:35.942Z</updated>
+  <updated>2026-04-20T00:47:30.178Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Silicon Bring-Up</title>
+    <link href="https://hyabc.github.io/silicon-bringup/"/>
+    <id>https://hyabc.github.io/silicon-bringup/</id>
+    <published>2026-04-20T00:12:42.000Z</published>
+    <updated>2026-04-20T00:47:30.178Z</updated>
+    
+    <content type="html"><![CDATA[<p>It has been a while since my previous post, and a lot has happened since then. Specifically, Claude Code and Codex has taken away all the fun of working on software projects, and that’s why this post is about ASIC validation.</p><p>At post-silicon stage, the chips are already manufactured and fixing bugs at this stage might lead to a respin. Hopefully ASIC is verified well at this point.</p><p>First we designed a PCB to connect to the chip. </p><img src="/images/silicon-bringup/pcb.jpg" style="height: 240px;"><p>Then we connected the PCB to power supply, oscilloscope, and <a href="https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/ek-u1-zcu102-g.html">an Xilinx FPGA</a> (to generate and observe the test vectors). This FPGA is very nice, it has ARM CPU cores that runs Linux and you can connect it to the Internet. </p><img src="/images/silicon-bringup/lab.jpg" style="height: 240px;"><p>The testing sequence is clock generator → DFT scan chain → chip functionality. Somewhat similar to software testing - making sure that things more likely to work actually work first. And it feels great when DFT works, since it can be impossible to work-around bugs when DFT itself does not work.</p><p>And then the chip actually works! All the problems we encountered are actually setup bugs (e.g. wrong pins in Xilinx <a href="https://www.amd.com/en/products/software/adaptive-socs-and-fpgas/vivado.html">Vivado</a> pins setup vs on the PCB). We had a Schmoo plot about which frequencies and voltages the chip works correctly at. </p><img src="/images/silicon-bringup/schmoo.jpg" style="height: 240px;">]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;It has been a while since my previous post, and a lot has happened since then. Specifically, Claude Code and Codex has taken away all the</summary>
+      
+    
+    
+    
+    
+    <category term="Chip" scheme="https://hyabc.github.io/tags/Chip/"/>
+    
+  </entry>
   
   <entry>
     <title>Systolic Blood Pressure</title>
@@ -440,28 +462,6 @@
       
       
     <summary type="html">&lt;p&gt;The game mentioned in the last post was completed! We demonstrated this game system in last week’s &lt;a href=&quot;https://www.build18.org/&quot;&gt;Bui</summary>
-      
-    
-    
-    
-    
-    <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>OpenGL ES 3 Review</title>
-    <link href="https://hyabc.github.io/opengles-3-review/"/>
-    <id>https://hyabc.github.io/opengles-3-review/</id>
-    <published>2022-01-03T16:34:25.000Z</published>
-    <updated>2022-01-03T23:30:53.446Z</updated>
-    
-    <content type="html"><![CDATA[<p>tyz is currently developing a <a href="https://github.com/rg526/rg526">game</a> based on OpenGL ES 3.0 for 3D graphics. This article will review how to develop an OpenGL ES 3 application.</p><h3 id="Shaders"><a href="#Shaders" class="headerlink" title="Shaders"></a>Shaders</h3><p>There are two types of shaders: vertex shader and fragment shader. Vertex shader processes data for each vertex and both specifies the actual position in the “clip space” (gl_Position) and passes data to fragment shader. Based on the incoming data, fragment shader processes data for each fragment (similar to pixel,  so fragment shaders are sometimes called pixel shaders) and specifies the color for the fragment. Both of shaders run on GPU to reduce CPU processing load. </p><p>This statement actually has a issue. Suppose you want to draw a triangle and the vertex shader passes on data about the three vertices. However, there are much more than three fragments inside the triangle surface that expects input. The graphics hardware will actually perform interpolation on the data from the output of vertex shader to input of fragment shader. Users can specify “flat interpolation” in OpenGL ES 3 API to disable such interpolation.</p><p>As users can write custom shaders, OpenGL ES 3 does not use a fixed graphics pipeline to perform different operations, like OpenGL ES 1.x. To support things like lighting effects, users should write vertex and fragment shaders.</p><h3 id="Attributes-and-uniforms"><a href="#Attributes-and-uniforms" class="headerlink" title="Attributes and uniforms"></a>Attributes and uniforms</h3><p>Input data are passed to the shader programs through attributes and uniforms. Attributes can be different for different input vertices. You can input either an array or a single element and the corresponding data for each vertex will go to shader input. However, OpenGL ES 3 requires a minimum of 16 attributes for all implementations, so to make program runs on every platforms that conforms to OpenGL ES 3 specification, the user can use at most 16 attributes. Uniforms are the same for all vertices, and the minimum number of supporting uniforms are much larger. </p><h3 id="Vertex-Buffer-Objects-VBO-and-Vertex-Array-Objects-VAO"><a href="#Vertex-Buffer-Objects-VBO-and-Vertex-Array-Objects-VAO" class="headerlink" title="Vertex Buffer Objects (VBO) and Vertex Array Objects (VAO)"></a>Vertex Buffer Objects (VBO) and Vertex Array Objects (VAO)</h3><p>Data transferring between main memory and graphics memory are expensive. It is not very efficient to transfer memory on each draw operation. OpenGL ES 3 supports creating a buffer on the graphics memory and storing data there, so that drawing is more efficient. Users can create a buffer by glGenBuffers and store by glBufferData. This is known as Vertex Buffer Objects. Because there are fixed number of buffer targets, users can use Vertex Array Objects to store multiple vertex array data, vertex indices data, etc. in different places.</p><h3 id="Textures"><a href="#Textures" class="headerlink" title="Textures"></a>Textures</h3><p>Textures can be applied when drawing objects. You can create a texture by glGenTextures and input the bitmap data into the texture by glTexImage2D. Then you can access texture data in shader programs by a sampler2D uniform.</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;tyz is currently developing a &lt;a href=&quot;https://github.com/rg526/rg526&quot;&gt;game&lt;/a&gt; based on OpenGL ES 3.0 for 3D graphics. This article will</summary>
       
     
     
