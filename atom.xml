@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2026-04-20T00:47:30.178Z</updated>
+  <updated>2026-05-06T05:05:04.400Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Real-Time 3D Model Generation</title>
+    <link href="https://hyabc.github.io/rt-model-gen/"/>
+    <id>https://hyabc.github.io/rt-model-gen/</id>
+    <published>2026-05-04T04:30:50.000Z</published>
+    <updated>2026-05-06T05:05:04.400Z</updated>
+    
+    <content type="html"><![CDATA[<p>Recently ByteDance has published <a href="https://seed.bytedance.com/en/public_papers/seed3d-2-0-advancing-high-fidelity-simulation-ready-3d-content-generation">Seed3D 2.0</a>. One super interesting idea is it generates 3D content in two stages, creating global structure first and then refining geometric details. (Although this idea seems to first appeared in <a href="https://arxiv.org/abs/2503.23368">VLIPP</a>). This pipeline design somewhat resembles 3D graphics pipeline where model goes through vertex shader and fragment shader. </p><img src="/images/graphics/seed3d-v2-pipeline.png" style="height: 200px;"><p>As GPUs become faster, soon we might be able to generate 3D model in real time. A new 3D model every frame. Characters that can evolve throughout the game story. We are already in the era of real-time frame generation with <a href="https://github.com/NVIDIA-RTX/Streamline/blob/main/docs/ProgrammingGuideDLSS_G.md">DLSS-FG</a> now. With real-time 3D model generation, it would be a lot easier for everybody to create their own games and animations. </p><p>Since we’ll be able to create 3D models on the fly, 3D graphics APIs can be designed around unstructured text and media, and all 3D model&#x2F;texture&#x2F;lighting information are produced by the model. GPU can be the black box that turns imagination into full virtual reality by itself.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Recently ByteDance has published &lt;a href=&quot;https://seed.bytedance.com/en/public_papers/seed3d-2-0-advancing-high-fidelity-simulation-ready</summary>
+      
+    
+    
+    
+    
+    <category term="Graphics" scheme="https://hyabc.github.io/tags/Graphics/"/>
+    
+  </entry>
   
   <entry>
     <title>Silicon Bring-Up</title>
@@ -446,28 +468,6 @@
     
     
     <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Project RhythmGame526</title>
-    <link href="https://hyabc.github.io/rg526/"/>
-    <id>https://hyabc.github.io/rg526/</id>
-    <published>2022-02-20T02:47:21.000Z</published>
-    <updated>2022-02-20T03:02:15.049Z</updated>
-    
-    <content type="html"><![CDATA[<p>The game mentioned in the last post was completed! We demonstrated this game system in last week’s <a href="https://www.build18.org/">Build18</a> event from the ECE department (Project <a href="https://www.build18.org/garage/project/704/">Haptic Rhythm Music Game</a>). Here are some photos of the system:</p><img src="/images/rg526/1.jpg" style="height: 120px;"><img src="/images/rg526/2.jpg" style="height: 120px;"><img src="/images/rg526/3.jpg" style="height: 120px;"><img src="/images/rg526/4.jpg" style="height: 120px;"><img src="/images/rg526/5.jpg" style="height: 120px;"><img src="/images/rg526/6.jpg" style="height: 120px;"><img src="/images/rg526/7.jpg" style="height: 120px;"><img src="/images/rg526/8.jpg" style="height: 120px;"><img src="/images/rg526/9.jpg" style="height: 240px;"><p>The <a href="https://www.adafruit.com/product/1201">vibrating motors</a> (the black discs in the photos) are fun! It provides a very powerful haptic effect as we attach it to a 5V power source and switched by a <a href="https://www.adafruit.com/product/355">MOSFET</a> from Raspberry PI GPIO ports.</p><p>And the code is structured so that it’s very easy to create customized games! You only need to create a “note” file containing the starting&#x2F;ending timestamp and channel (1-4) for each block, and point the global constants in state.c to the new mp3 and note file. </p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;The game mentioned in the last post was completed! We demonstrated this game system in last week’s &lt;a href=&quot;https://www.build18.org/&quot;&gt;Bui</summary>
-      
-    
-    
-    
-    
-    <category term="OpenGL ES" scheme="https://hyabc.github.io/tags/OpenGL-ES/"/>
     
   </entry>
   
