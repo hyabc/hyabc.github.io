@@ -6,7 +6,7 @@
   <link href="https://hyabc.github.io/atom.xml" rel="self"/>
   
   <link href="https://hyabc.github.io/"/>
-  <updated>2026-05-06T05:05:04.400Z</updated>
+  <updated>2026-06-01T06:48:43.839Z</updated>
   <id>https://hyabc.github.io/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>LPL#6 : Agentic Memory Hierarchy</title>
+    <link href="https://hyabc.github.io/agentic-memory-hierarchy/"/>
+    <id>https://hyabc.github.io/agentic-memory-hierarchy/</id>
+    <published>2026-06-01T06:16:22.000Z</published>
+    <updated>2026-06-01T06:48:43.839Z</updated>
+    
+    <content type="html"><![CDATA[<p>Computer systems have the <a href="https://abseil.io/fast/hints.html">memory hierarchy</a>: given that we have storage technologies that have very different properties, some have high density and high latency (e.g. HDDs), some have low density and low latency (e.g. SRAM) and some are in the middle (DRAM), we could use a mix of these technologies to achieve both high capacity and reasonably low latency. Essentially, data are moved between different layers in the hierarchy based on the data access pattern. Frequently accessed data tend to stay on the top layers of the hierarchy.</p><p>The top layers (L0, L1, L2, L3 cache) are hardware managed, because the cache policy needs to be fast enough for the layer to make sense. If it takes more time to decide whether to evict a line or not than to request the next layer, that would make the layer useless. The bottom layers (disk, network) are software managed since the time that software cache policy takes is tiny compared to actually accessing the next layer.</p><p>In LLMs, we have:</p><ol><li>Context window, where all the AI magic happens. Any data need to be loaded here to be considered by the model. </li><li>Skills, somewhat similar to programmable microcode. Agents will follow the instructions by loading it into the context window.</li><li>RAG, which is somewhat like a filesystem. If you need a document, you can find it on-demand.</li><li>MCP&#x2F;Tools call, somewhat like IO subsystem.</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Computer systems have the &lt;a href=&quot;https://abseil.io/fast/hints.html&quot;&gt;memory hierarchy&lt;/a&gt;: given that we have storage technologies that </summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Real-Time 3D Model Generation</title>
@@ -445,29 +465,6 @@
     
     
     <category term="Hexo" scheme="https://hyabc.github.io/tags/Hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Glory to Ukraine</title>
-    <link href="https://hyabc.github.io/glory-to-ukraine/"/>
-    <id>https://hyabc.github.io/glory-to-ukraine/</id>
-    <published>2022-02-27T18:12:09.000Z</published>
-    <updated>2022-02-27T18:20:24.791Z</updated>
-    
-    <content type="html"><![CDATA[<p>The world has witnessed another unjust and evil war, even in the 21st century. We stand with Ukraine!</p><img src="/images/ukraine.jpg" style="height: 350px;">]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;The world has witnessed another unjust and evil war, even in the 21st century. We stand with Ukraine!&lt;/p&gt;
-&lt;img src=&quot;/images/ukraine.jpg&quot; </summary>
-      
-    
-    
-    
-    
-    <category term="Misc" scheme="https://hyabc.github.io/tags/Misc/"/>
     
   </entry>
   
